@@ -5,7 +5,7 @@ public class Test {
 		byte byteVariable = 12;
 		short shortVariable = 12425;
 		int intVariable = 98883;
-		long longVariable = 123110390L;
+		long longVariable = 1231103955558988980L;
 
 		float floatVariable = 113.1234567891f;
 		double doubleVariable = 12345.123456789012345678;
