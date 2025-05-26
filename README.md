@@ -1,74 +1,78 @@
-# Java-Prep
+# Java-Prep 🌟
 
-### Features of Java
+A comprehensive guide to Java fundamentals, covering architecture, naming conventions, data types, operators, control structures, and more. Perfect for beginners and developers preparing for Java programming. 🚀
 
-1. Platform Independent
-2. Object Oriented
-3. Strictly Typed Language
-4. Automatic Garbage Collection
-5. Robust
-6. Secure
+## Features of Java ✨
 
-# Java Architecture: JDK, JRE, and JVM Explained
+- ✅ **Platform Independent**: Write once, run anywhere.
+- ✅ **Object Oriented**: Supports encapsulation, inheritance, and polymorphism.
+- ✅ **Strictly Typed Language**: Requires explicit data type declarations.
+- ✅ **Automatic Garbage Collection**: Manages memory automatically.
+- ✅ **Robust**: Handles errors and exceptions effectively.
+- ✅ **Secure**: Provides strong security features.
+
+---
+
+# Java Architecture: JDK, JRE, and JVM Explained 🛠️
 
 ## 📜 Java Program Flow
 
-1. `.java` files are written in a high-level language.
-2. These `.java` files are compiled using the Java Compiler (`javac`), producing a `.class` file.
-3. The `.class` file contains **Bytecode**, which is executed by the JVM to convert it into **machine code**.
+1. **Source Code**: Write `.java` files in a high-level language.
+2. **Compilation**: Compile `.java` files using the Java Compiler (`javac`) to produce `.class` files.
+3. **Bytecode Execution**: The `.class` file contains **Bytecode**, which the JVM converts into **machine code** for execution.
 
 ### 🔄 Flow Summary
 
-`.java → compile (javac) → .class → JVM → Binary → Run`
+`.java → compile (javac) → .class → JVM → Binary → Run` 🚀
 
 ---
 
 ## ☕ JDK - Java Development Kit
 
-- **Target Audience:** Developers
-- **Includes:**
+- **Target Audience**: Developers 👨‍💻
+- **Includes**:
   - JDK = JRE + Development Tools:
-    - Java Compiler (`javac`)
-    - Java Debugger (`jdb`)
-    - Other tools: `javadoc`, `jar`, etc.
+    - **Java Compiler** (`javac`): Converts `.java` to `.class`.
+    - **Java Debugger** (`jdb`): Debugs Java programs.
+    - **Other Tools**: `javadoc` (documentation), `jar` (archiving), etc.
 
 ---
 
 ## 🧪 JRE - Java Runtime Environment
 
-- **Target Audience:** End Users / Clients
-- **Includes:**
-  - JRE = JVM + Runtime Libraries  
-    (e.g., `java.util`, `java.io`)
+- **Target Audience**: End Users / Clients 👩‍💼
+- **Includes**:
+  - JRE = JVM + Runtime Libraries
+    - Libraries: `java.util`, `java.io`, etc., for runtime support.
 
 ---
 
 ## ⚙️ JVM - Java Virtual Machine
 
-- **Purpose:**
-  - Executes the Bytecode (`.class` file)
-  - Provides Platform Independence
+- **Purpose**:
+  - Executes Bytecode (`.class` files).
+  - Ensures **Platform Independence** by abstracting hardware.
 
 ### 🔧 Components of JVM
 
-#### 1. Class Loader Subsystem
+#### 1. Class Loader Subsystem 📚
 
-- **Class Loading:** Loads `.class` files into JVM
-- **Verification:** Ensures bytecode integrity and security
+- **Class Loading**: Loads `.class` files into JVM memory.
+- **Verification**: Ensures bytecode integrity and security.
 
-#### 2. Memory Management in JVM
+#### 2. Memory Management in JVM 🧠
 
-- **Method Area:** Stores static variables, methods, class metadata
-- **Heap Area:** Stores objects and instance variables
-- **Stack Area:** Stores local variables, method call data (per thread)
-- **Program Counter Register:** Holds current and next instruction addresses
-- **Native Method Stack:** Executes native methods (e.g., C/C++ via JNI)
+- **Method Area**: Stores static variables, methods, and class metadata.
+- **Heap Area**: Stores objects and instance variables.
+- **Stack Area**: Stores local variables and method call data (per thread).
+- **Program Counter Register**: Tracks current and next instruction addresses.
+- **Native Method Stack**: Executes native methods (e.g., C/C++ via JNI).
 
-#### 3. Execution Engine
+#### 3. Execution Engine 🏃‍♂️
 
-- **Interpreter:** Executes bytecode line-by-line
-- **JIT Compiler (Just-In-Time):** Converts frequently used bytecode into native code for speed
-- **Garbage Collector:** Frees memory by removing unused objects
+- **Interpreter**: Executes bytecode line-by-line.
+- **JIT Compiler (Just-In-Time)**: Converts frequently used bytecode to native code for speed.
+- **Garbage Collector**: Frees memory by removing unused objects.
 
 ---
 
@@ -82,29 +86,31 @@
 
 ### 🧠 Memory Components
 
-- **Method Area:** Class metadata and static members
-- **Heap:** Objects and instance data
-- **Stack:** Method call stack per thread
-- **Program Counter (PC) Register:** Instruction pointer
-- **Native Stack:** Native method execution
+- **Method Area**: Class metadata and static members 📋
+- **Heap**: Objects and instance data 🗄️
+- **Stack**: Method call stack per thread 📚
+- **Program Counter (PC) Register**: Instruction pointer 📍
+- **Native Stack**: Native method execution 🌐
 
 ### ⚙️ Execution Components
 
-- **Interpreter:** Line-by-line execution
-- **JIT Compiler:** On-the-fly optimization
-- **Garbage Collector:** Memory management
+- **Interpreter**: Line-by-line execution 🕒
+- **JIT Compiler**: On-the-fly optimization 🚀
+- **Garbage Collector**: Memory management 🗑️
 
 ---
 
-> 📝 This overview summarizes the core architecture of Java and how it ensures platform independence, performance, and memory management through its modular components.
+> 📝 **Note**: This overview highlights Java's core architecture, ensuring platform independence, performance, and efficient memory management through its modular components.
+
+---
 
 # Java Naming Conventions and Valid Identifiers 🌟
 
-Naming conventions in Java are crucial for writing clean, readable, and maintainable code. Following standard conventions ensures consistency across projects and improves collaboration. This guide covers valid identifiers and naming conventions for classes, packages, variables, and methods. 🚀
+Naming conventions in Java ensure clean, readable, and maintainable code. Adhering to standards improves collaboration and consistency across projects. 🚀
 
 ## 1. Introduction 📖
 
-Java provides flexibility in naming identifiers, but adhering to conventions enhances code readability and maintainability. Identifiers must follow specific rules to be valid, and conventions provide guidelines for consistent naming.
+Java identifiers must follow specific rules to be valid, and conventions provide guidelines for consistent naming.
 
 ## 2. Class Naming Conventions 🏛️
 
@@ -118,7 +124,7 @@ Java provides flexibility in naming identifiers, but adhering to conventions enh
 ### Conventions
 
 - 📌 Use **PascalCase** (each word starts with a capital letter).
-- 📌 Name should be a noun, reflecting the class's purpose.
+- 📌 Name should be a noun reflecting the class's purpose.
 
 ### Examples
 
@@ -143,13 +149,13 @@ void print-message() {} // ❌ Hyphen not allowed
 
 ### Rules for Valid Identifiers
 
-- ✅ Same as class identifiers: must start with a letter, underscore, or dollar sign; can include letters, digits, underscores, and dollar signs.
+- ✅ Same as class identifiers.
 - ❌ Cannot start with a digit or be a reserved keyword.
 
 ### Conventions
 
-- 📌 Use **lowercase** with words separated by dots (e.g., `com.example.project`).
-- 📌 Typically follow a reverse domain name structure (e.g., `com.company.app`).
+- 📌 Use **lowercase** with words separated by dots.
+- 📌 Follow a reverse domain name structure (e.g., `com.company.app`).
 
 ### Examples
 
@@ -170,7 +176,7 @@ package int.utils;     // ❌ 'int' is a keyword
 
 ### Rules for Valid Identifiers
 
-- ✅ Same as class identifiers: must start with a letter, underscore, or dollar sign; can include letters, digits, underscores, and dollar signs.
+- ✅ Same as class identifiers.
 - ❌ Cannot start with a digit or be a reserved keyword.
 
 ### Conventions
@@ -198,13 +204,13 @@ double total-amt; // ❌ Hyphen not allowed
 
 ### Rules for Valid Identifiers
 
-- ✅ Same as class identifiers: must start with a letter, underscore, or dollar sign; can include letters, digits, underscores, and dollar signs.
+- ✅ Same as class identifiers.
 - ❌ Cannot start with a digit or be a reserved keyword.
 
 ### Conventions
 
-- 📌 Use **camelCase** (first word lowercase, subsequent words capitalized).
-- 📌 Name should be a verb, reflecting the action performed.
+- 📌 Use **camelCase**.
+- 📌 Name should be a verb reflecting the action performed.
 
 ### Examples
 
@@ -233,31 +239,33 @@ void print-message() {} // ❌ Hyphen not allowed
 
 ## 7. Conclusion 🌈
 
-Following Java naming conventions ensures that your code adheres to industry standards, improves collaboration, and enhances maintainability. Using descriptive and consistent names makes your code easier to read and understand. 🙌
+Following Java naming conventions ensures code adheres to industry standards, improving collaboration and maintainability. Descriptive names enhance readability. 🙌
 
-# Java Data Types - Detailed Notes
+---
 
-Java is a strictly-typed language, meaning every variable must be declared with a data type that specifies the size and type of values it can store. This guide covers Java's data types, classified into **Primitive Data Types** and **Non-Primitive (Reference/Object) Data Types**, with examples and a summary table.
+# Java Data Types - Detailed Notes 📚
 
-## 1. Introduction
+Java is a strictly-typed language, requiring every variable to be declared with a data type. This guide covers **Primitive** and **Non-Primitive** data types with examples.
 
-Data types in Java define the kind of data a variable can hold. They are broadly categorized as:
+## 1. Introduction 🌟
 
-- **Primitive Data Types**: Built-in types for basic data like numbers, characters, and booleans.
-- **Non-Primitive (Reference) Data Types**: Complex types that hold references to objects, such as Strings, Arrays, Classes, and Interfaces.
+Data types specify the size and type of values a variable can hold, categorized as:
 
-## 2. Primitive Data Types
+- **Primitive Data Types**: Basic types like numbers, characters, and booleans.
+- **Non-Primitive (Reference) Data Types**: Complex types like Strings, Arrays, and Classes.
 
-Java has 8 built-in primitive data types, categorized into integer, floating-point, character, and boolean types.
+## 2. Primitive Data Types 🔢
+
+Java has 8 primitive data types, grouped into integer, floating-point, character, and boolean types.
 
 ### 2.1 Integer Types
 
-Integer types store whole numbers.
+Store whole numbers.
 
-- **byte**: Smallest integer type, useful for saving memory.
-- **short**: Larger than byte, saves memory compared to int.
-- **int**: Default integer type, commonly used for integer values.
-- **long**: Used for wider ranges, denoted with an 'L' suffix.
+- **byte**: Smallest integer type, memory-efficient.
+- **short**: Larger than byte, still memory-efficient.
+- **int**: Default integer type, widely used.
+- **long**: For large ranges, uses 'L' suffix.
 
 #### Summary Table
 
@@ -268,23 +276,69 @@ Integer types store whole numbers.
 | int       | 4 bytes | 0             | -2³¹ to 2³¹-1 (~ -2.1B to +2.1B) |
 | long      | 8 bytes | 0L            | -2⁶³ to 2⁶³-1                    |
 
+#### Example
+
+```java
+public class IntegerTypesExample {
+    public static void main(String[] args) {
+        byte b = 100;
+        short s = 1000;
+        int i = 100000;
+        long l = 1000000L;
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+    }
+}
+```
+
+#### Output
+
+```
+Byte: 100
+Short: 1000
+Int: 100000
+Long: 1000000
+```
+
 ### 2.2 Floating-Point Types
 
-Floating-point types store decimal values.
+Store decimal values.
 
-- **float**: Single-precision 32-bit, holds up to 7 decimal digits, denoted with an 'f' suffix.
-- **double**: Double-precision 64-bit, default for decimal values, holds up to 15 decimal digits.
+- **float**: 32-bit, 7 decimal digits, 'f' suffix.
+- **double**: 64-bit, 15 decimal digits, default for decimals.
 
 #### Summary Table
 
-| Data Type | Size    | Default Value | Range                                |
-| --------- | ------- | ------------- | ------------------------------------ |
-| float     | 4 bytes | 0.0f          | Approximately ±3.4e−038 to ±3.4e+038 |
-| double    | 8 bytes | 0.0d          | Approximately ±1.7e−308 to ±1.7e+308 |
+| Data Type | Size    | Default Value | Range                  |
+| --------- | ------- | ------------- | ---------------------- |
+| float     | 4 bytes | 0.0f          | ±3.4e−038 to ±3.4e+038 |
+| double    | 8 bytes | 0.0d          | ±1.7e−308 to ±1.7e+308 |
+
+#### Example
+
+```java
+public class FloatingPointExample {
+    public static void main(String[] args) {
+        float f = 3.14f;
+        double d = 3.14159;
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+    }
+}
+```
+
+#### Output
+
+```
+Float: 3.14
+Double: 3.14159
+```
 
 ### 2.3 Character Type
 
-- **char**: Stores a single 16-bit Unicode character, such as 'A', '9', or special symbols.
+- **char**: Stores a single 16-bit Unicode character.
 
 #### Summary Table
 
@@ -292,9 +346,29 @@ Floating-point types store decimal values.
 | --------- | ------- | ------------- | -------------------------------- |
 | char      | 2 bytes | ''            | 0 to 65,535 (Unicode characters) |
 
+#### Example
+
+```java
+public class CharExample {
+    public static void main(String[] args) {
+        char c1 = 'A';
+        char c2 = '\u0041'; // Unicode for 'A'
+        System.out.println("Char (literal): " + c1);
+        System.out.println("Char (Unicode): " + c2);
+    }
+}
+```
+
+#### Output
+
+```
+Char (literal): A
+Char (Unicode): A
+```
+
 ### 2.4 Boolean Type
 
-- **boolean**: Stores `true` or `false`, used for conditional flags.
+- **boolean**: Stores `true` or `false`.
 
 #### Summary Table
 
@@ -302,16 +376,33 @@ Floating-point types store decimal values.
 | --------- | ------ | ------------- | ------------- |
 | boolean   | ~1 bit | false         | true or false |
 
-## 3. Non-Primitive Data Types
+#### Example
 
-Non-primitive types, also known as reference types, are created by the programmer and hold references to objects.
+```java
+public class BooleanExample {
+    public static void main(String[] args) {
+        boolean isActive = true;
+        System.out.println("Is Active: " + isActive);
+    }
+}
+```
+
+#### Output
+
+```
+Is Active: true
+```
+
+## 3. Non-Primitive Data Types 🗂️
+
+Non-primitive types hold references to objects.
 
 ### Examples
 
 - **Strings**: Sequence of characters.
-- **Arrays**: Collection of similar types of elements.
-- **Classes**: Blueprint for creating objects.
-- **Interfaces**: A contract that classes implement.
+- **Arrays**: Collection of similar elements.
+- **Classes**: Blueprints for objects.
+- **Interfaces**: Contracts for classes.
 
 ### Example Code
 
@@ -337,7 +428,7 @@ String: John
 Array element: 90
 ```
 
-## 4. Summary Table
+## 4. Summary Table 📊
 
 | Type    | Category  | Size    | Default Value | Example Values           |
 | ------- | --------- | ------- | ------------- | ------------------------ |
@@ -350,23 +441,25 @@ Array element: 90
 | char    | Character | 2 bytes | ''            | 'A', '9', '#'            |
 | boolean | Logical   | ~1 bit  | false         | true, false              |
 
-## 5. Conclusion
+## 5. Conclusion 🌈
 
-Understanding Java data types is fundamental to efficient and safe programming. Choosing the correct data type ensures better performance and memory management.
+Choosing the right data type is key to efficient Java programming, optimizing performance and memory usage.
 
-# Java Operators with Code Examples and Outputs
+---
 
-This guide covers different types of Java operators, including their descriptions, code examples, and expected outputs.
+# Java Operators with Code Examples 🎯
 
-## 1. Arithmetic Operators
+Operators perform operations on variables and values. This guide covers Java operators with examples and outputs.
 
-Arithmetic operators perform basic mathematical operations.
+## 1. Arithmetic Operators ➕
 
-- **+**: Addition (a + b)
-- **-**: Subtraction (a - b)
-- **\***: Multiplication (a \* b)
-- **/**: Division (a / b)
-- **%**: Modulus (a % b)
+Perform basic mathematical operations.
+
+- ✅ **+**: Addition
+- ✅ **-**: Subtraction
+- ✅ **\***: Multiplication
+- ✅ **/**: Division
+- ✅ **%**: Modulus
 
 ### Example Code
 
@@ -379,7 +472,7 @@ System.out.println("Div: " + (a / b));
 System.out.println("Mod: " + (a % b));
 ```
 
-### Expected Output
+### Output
 
 ```
 Add: 13
@@ -389,16 +482,16 @@ Div: 3
 Mod: 1
 ```
 
-## 2. Assignment Operators
+## 2. Assignment Operators 📝
 
-Assignment operators are used to assign values to variables.
+Assign values to variables.
 
-- **=**: Assign (a = 10)
-- **+=**: Add and assign (a += 5) → a = a + 5
-- **-=**: Subtract and assign (a -= 5)
-- **\*=**: Multiply and assign (a \*= 5)
-- **/=**: Divide and assign (a /= 5)
-- **%=**: Modulus and assign (a %= 5)
+- ✅ **=**: Assign
+- ✅ **+=**: Add and assign
+- ✅ **-=**: Subtract and assign
+- ✅ **\*=**: Multiply and assign
+- ✅ **/=**: Divide and assign
+- ✅ **%=**: Modulus and assign
 
 ### Example Code
 
@@ -412,22 +505,22 @@ a %= 4;
 System.out.println("Final a: " + a);
 ```
 
-### Expected Output
+### Output
 
 ```
 Final a: 1
 ```
 
-## 3. Relational Operators
+## 3. Relational Operators ⚖️
 
-Relational operators compare two values and return a boolean result.
+Compare values, returning a boolean.
 
-- **==**: Equal to (a == b)
-- **!=**: Not equal to (a != b)
-- **>**: Greater than (a > b)
-- **<**: Less than (a < b)
-- **>=**: Greater than or equal to (a >= b)
-- **<=**: Less than or equal to (a <= b)
+- ✅ **==**: Equal to
+- ✅ **!=**: Not equal to
+- ✅ **>**: Greater than
+- ✅ **<**: Less than
+- ✅ **>=**: Greater than or equal to
+- ✅ **<=**: Less than or equal to
 
 ### Example Code
 
@@ -441,7 +534,7 @@ System.out.println(a >= b);
 System.out.println(a <= b);
 ```
 
-### Expected Output
+### Output
 
 ```
 false
@@ -452,15 +545,15 @@ false
 true
 ```
 
-## 4. Unary Operators
+## 4. Unary Operators 🔄
 
-Unary operators operate on a single operand.
+Operate on a single operand.
 
-- **+**: Unary plus (+a)
-- **-**: Unary minus (-a)
-- **++**: Increment (++a or a++)
-- **--**: Decrement (--a or a--)
-- **!**: Logical NOT (!true)
+- ✅ **+**: Unary plus
+- ✅ **-**: Unary minus
+- ✅ **++**: Increment
+- ✅ **--**: Decrement
+- ✅ **!**: Logical NOT
 
 ### Example Code
 
@@ -475,7 +568,7 @@ boolean flag = false;
 System.out.println(!flag);
 ```
 
-### Expected Output
+### Output
 
 ```
 5
@@ -486,13 +579,13 @@ System.out.println(!flag);
 true
 ```
 
-## 5. Logical Operators
+## 5. Logical Operators 🔗
 
-Logical operators combine multiple boolean conditions.
+Combine boolean conditions.
 
-- **&&**: Logical AND (a > 5 && a < 10)
-- **||**: Logical OR (a > 5 || b < 3)
-- **!**: Logical NOT (!(a > 5))
+- ✅ **&&**: Logical AND
+- ✅ **||**: Logical OR
+- ✅ **!**: Logical NOT
 
 ### Example Code
 
@@ -503,7 +596,7 @@ System.out.println((a < 5) || (b < 10));
 System.out.println(!(a < b));
 ```
 
-### Expected Output
+### Output
 
 ```
 true
@@ -511,21 +604,23 @@ true
 true
 ```
 
-# Java Conditional Statements
+---
 
-This guide covers Java conditional statements, including their purpose, syntax, examples, and outputs.
+# Java Conditional Statements 🛑
 
-## 1. if Statement
+Conditional statements control program flow based on conditions. This guide covers their syntax and examples.
+
+## 1. if Statement ✅
 
 ### Purpose
 
-Executes a block of code only if a specified condition is true.
+Executes code if a condition is true.
 
 ### Syntax
 
 ```java
 if (condition) {
-    // Code to execute if condition is true
+    // Code
 }
 ```
 
@@ -544,19 +639,19 @@ if (age >= 18) {
 You are eligible to vote.
 ```
 
-## 2. if-else Statement
+## 2. if-else Statement 🔄
 
 ### Purpose
 
-Executes one block if the condition is true, and another block if the condition is false.
+Executes one block if true, another if false.
 
 ### Syntax
 
 ```java
 if (condition) {
-    // Code if condition is true
+    // True block
 } else {
-    // Code if condition is false
+    // False block
 }
 ```
 
@@ -577,21 +672,21 @@ if (number % 2 == 0) {
 Odd number
 ```
 
-## 3. if-else-if Ladder
+## 3. if-else-if Ladder 📊
 
 ### Purpose
 
-Tests multiple conditions sequentially. Executes the first block where the condition is true.
+Tests multiple conditions sequentially.
 
 ### Syntax
 
 ```java
 if (condition1) {
-    // Executes if condition1 is true
+    // Block 1
 } else if (condition2) {
-    // Executes if condition2 is true
+    // Block 2
 } else {
-    // Executes if none of the conditions are true
+    // Default block
 }
 ```
 
@@ -616,18 +711,18 @@ if (marks >= 90) {
 Grade B
 ```
 
-## 4. Nested if Statements
+## 4. Nested if Statements 🪆
 
 ### Purpose
 
-Allows an if or if-else statement inside another if or else block. Useful for multiple-level checks.
+Places if statements inside others for multi-level checks.
 
 ### Syntax
 
 ```java
 if (condition1) {
     if (condition2) {
-        // Code if both condition1 and condition2 are true
+        // Code
     }
 }
 ```
@@ -654,25 +749,24 @@ if (age >= 18) {
 You can drive.
 ```
 
-## 5. switch Statement
+## 5. switch Statement 🔀
 
 ### Purpose
 
-Used when checking a variable for equality against multiple fixed values (e.g., int, char, String).
+Checks a variable against multiple values.
 
 ### Syntax
 
 ```java
 switch (expression) {
     case value1:
-        // Code for value1
+        // Code
         break;
     case value2:
-        // Code for value2
+        // Code
         break;
-    ...
     default:
-        // Default code if no match
+        // Default
 }
 ```
 
@@ -701,41 +795,37 @@ switch (day) {
 Wednesday
 ```
 
-## 6. Summary Table
+## 6. Summary Table 📊
 
-| Statement Type | Use Case                                               |
-| -------------- | ------------------------------------------------------ |
-| if             | Single condition                                       |
-| if-else        | Binary condition (true/false)                          |
-| if-else-if     | Multiple conditions in sequence                        |
-| nested if      | Decision based on multiple dependent conditions        |
-| switch         | Multiple specific values of an expression (e.g., menu) |
+| Statement Type | Use Case                               |
+| -------------- | -------------------------------------- |
+| if             | Single condition                       |
+| if-else        | Binary condition                       |
+| if-else-if     | Multiple sequential conditions         |
+| nested if      | Multi-level dependent conditions       |
+| switch         | Equality check against multiple values |
 
-# Java Loops - Comprehensive Notes
+---
 
-Loops in Java are used to execute a block of code repeatedly as long as a given condition is true. Java provides several loop constructs:
+# Java Loops - Comprehensive Notes 🔁
 
-- for loop
-- while loop
-- do-while loop
-- for-each loop (enhanced for loop)
-- Nested loops (any loop inside another loop)
+Loops execute code repeatedly based on a condition. This guide covers Java’s loop constructs.
 
-## 1. for Loop
+## 1. for Loop 🔄
 
 ### Syntax
 
 ```java
 for (initialization; condition; update) {
-    // block of code
+    // Code
 }
 ```
 
 ### Terms Explained
 
-- **Initialization**: Executes once before the loop starts. Usually used to initialize a loop control variable.
-- **Condition**: Boolean expression checked before each iteration. If true, the loop continues; if false, it stops.
-- **Update**: Updates the loop control variable, executed after each iteration.
+- **Initialization**: Runs once to set up the loop.
+- **Condition**: Checked before each iteration.
+- **Update**: Runs after each iteration.
 
 ### Example
 
@@ -755,11 +845,11 @@ i = 4
 i = 5
 ```
 
-## 2. Nested for Loop
+## 2. Nested for Loop 🪆
 
 ### Use Case
 
-Often used for printing patterns or working with multi-dimensional data.
+Ideal for patterns or multi-dimensional data.
 
 ### Example
 
@@ -782,19 +872,19 @@ i = 3, j = 1
 i = 3, j = 2
 ```
 
-## 3. while Loop
+## 3. while Loop ⏳
 
 ### Syntax
 
 ```java
 while (condition) {
-    // block of code
+    // Code
 }
 ```
 
 ### Explanation
 
-The condition is checked before the loop executes. If it's false initially, the loop may never run.
+Checks condition before each iteration.
 
 ### Example
 
@@ -814,19 +904,19 @@ i = 2
 i = 3
 ```
 
-## 4. do-while Loop
+## 4. do-while Loop 🔄
 
 ### Syntax
 
 ```java
 do {
-    // block of code
+    // Code
 } while (condition);
 ```
 
 ### Explanation
 
-Executes the block at least once, even if the condition is false initially.
+Executes at least once before checking the condition.
 
 ### Example
 
@@ -846,17 +936,17 @@ i = 2
 i = 3
 ```
 
-## 5. for-each Loop (Enhanced for Loop)
+## 5. for-each Loop (Enhanced for Loop) 🗃️
 
 ### Use Case
 
-Best for iterating over arrays or collections when the index is not required.
+Ideal for arrays or collections.
 
 ### Syntax
 
 ```java
 for (type element : array) {
-    // block of code
+    // Code
 }
 ```
 
@@ -877,33 +967,32 @@ num = 20
 num = 30
 ```
 
-## Summary Table
+## Summary Table 📊
 
-| Loop Type  | Entry Condition | Guaranteed Execution | Best Use Case                      |
-| ---------- | --------------- | -------------------- | ---------------------------------- |
-| for        | Yes             | No                   | Known number of iterations         |
-| Nested for | Yes             | No                   | Patterns, matrices                 |
-| while      | Yes             | No                   | Unknown iterations, sentinel loops |
-| do-while   | No              | Yes                  | At least one iteration needed      |
-| for-each   | Yes             | No                   | Arrays or collections              |
+| Loop Type  | Entry Condition | Guaranteed Execution | Best Use Case          |
+| ---------- | --------------- | -------------------- | ---------------------- |
+| for        | Yes             | No                   | Known iterations       |
+| Nested for | Yes             | No                   | Patterns, matrices     |
+| while      | Yes             | No                   | Unknown iterations     |
+| do-while   | No              | Yes                  | At least one iteration |
+| for-each   | Yes             | No                   | Arrays or collections  |
 
-# Break and Continue in Java - Detailed Notes
+---
 
-This guide covers the `break` and `continue` control statements in Java, including their purpose, syntax, examples, and a comparison.
+# Break and Continue in Java - Detailed Notes 🛑
 
-## 1. Introduction
+`break` and `continue` control loop and switch execution flow.
 
-In Java, `break` and `continue` are control statements used within loops and switch statements:
+## 1. Introduction 📖
 
-- **break**: Terminates the innermost loop or switch statement immediately.
-- **continue**: Skips the current iteration and jumps to the next loop cycle.
+- **break**: Terminates the innermost loop or switch.
+- **continue**: Skips the current iteration, proceeding to the next.
 
-## 2. break Statement
+## 2. break Statement 🚫
 
 ### Description
 
-- Terminates the innermost loop (`for`, `while`, `do-while`) or `switch` statement immediately.
-- Control moves to the statement following the loop or switch.
+Terminates the innermost loop or switch.
 
 ### Syntax
 
@@ -911,7 +1000,7 @@ In Java, `break` and `continue` are control statements used within loops and swi
 break;
 ```
 
-### Example 1: Using break in a for Loop
+### Example 1: break in for Loop
 
 ```java
 public class BreakExample {
@@ -935,7 +1024,7 @@ public class BreakExample {
 4
 ```
 
-### Example 2: Using break in a while Loop
+### Example 2: break in while Loop
 
 ```java
 public class BreakWhileExample {
@@ -961,12 +1050,11 @@ public class BreakWhileExample {
 4
 ```
 
-## 3. continue Statement
+## 3. continue Statement ⏭️
 
 ### Description
 
-- Skips the current iteration of a loop and proceeds to the next iteration.
-- Only used in loops (`for`, `while`, `do-while`), not in `switch` statements.
+Skips the current iteration.
 
 ### Syntax
 
@@ -974,7 +1062,7 @@ public class BreakWhileExample {
 continue;
 ```
 
-### Example 1: Using continue in a for Loop
+### Example 1: continue in for Loop
 
 ```java
 public class ContinueExample {
@@ -998,7 +1086,7 @@ public class ContinueExample {
 5
 ```
 
-### Example 2: Using continue in a while Loop
+### Example 2: continue in while Loop
 
 ```java
 public class ContinueWhileExample {
@@ -1024,22 +1112,19 @@ public class ContinueWhileExample {
 5
 ```
 
-## 4. break vs continue
+## 4. break vs continue 📊
 
-### Comparison Table
+| Feature             | break              | continue                |
+| ------------------- | ------------------ | ----------------------- |
+| **Purpose**         | Exits loop/switch  | Skips current iteration |
+| **After Execution** | Moves outside loop | Moves to next iteration |
+| **Usage**           | Loops and switch   | Loops only              |
 
-| Feature             | break                             | continue                        |
-| ------------------- | --------------------------------- | ------------------------------- |
-| **Purpose**         | Exits the loop or switch entirely | Skips current iteration         |
-| **After Execution** | Moves control outside the loop    | Moves control to next iteration |
-| **Usage**           | Loops and switch statements       | Only loops                      |
-
-## 5. Using Labels with break and continue
+## 5. Using Labels with break and continue 🏷️
 
 ### Description
 
-- Labels allow `break` or `continue` to target an outer loop instead of the innermost one.
-- Useful in nested loops to control flow beyond the immediate loop.
+Labels control outer loops in nested structures.
 
 ### Example: break with Label
 
@@ -1093,29 +1178,27 @@ public class ContinueLabelExample {
 2 1
 ```
 
-# Type Casting in Java - Detailed Notes
+---
 
-Type casting in Java is the process of converting a variable from one data type to another. This guide covers the two types of type casting, their syntax, examples, and key considerations.
+# Type Casting in Java - Detailed Notes 🔄
 
-## 1. Introduction
+Type casting converts a variable from one data type to another.
 
-There are two types of type casting in Java:
+## 1. Introduction 📖
 
-- **Implicit Casting (Widening)**: Automatic conversion from smaller to larger data types.
-- **Explicit Casting (Narrowing)**: Manual conversion from larger to smaller data types.
+- **Implicit Casting (Widening)**: Automatic, smaller to larger type.
+- **Explicit Casting (Narrowing)**: Manual, larger to smaller type.
 
-## 2. Implicit Type Casting (Widening)
+## 2. Implicit Type Casting (Widening) 📈
 
 ### Description
 
-- Happens automatically.
-- Smaller data types are promoted to larger data types.
-- No data loss occurs.
+- Automatic, no data loss.
 - Order: `byte -> short -> int -> long -> float -> double`
 
 ### Syntax
 
-No special syntax required.
+No special syntax.
 
 ### Example 1: byte to int
 
@@ -1157,13 +1240,11 @@ Int value: 25
 Double value after casting: 25.0
 ```
 
-## 3. Explicit Type Casting (Narrowing)
+## 3. Explicit Type Casting (Narrowing) 📉
 
 ### Description
 
-- Requires manual intervention by the programmer.
-- Converts larger data types to smaller types.
-- May cause data loss or truncation.
+- Manual, may cause data loss.
 - Order: `double -> float -> long -> int -> short -> byte`
 
 ### Syntax
@@ -1192,7 +1273,7 @@ Double value: 9.7
 Int value after casting: 9
 ```
 
-### Example 2: int to byte with Data Loss
+### Example 2: int to byte
 
 ```java
 public class ExplicitCastingExample2 {
@@ -1212,18 +1293,18 @@ Int value: 130
 Byte value after casting: -126 (Data Loss)
 ```
 
-## 4. Data Loss During Casting
+## 4. Data Loss During Casting ⚠️
 
 ### Description
 
-When a larger value is cast into a smaller type, data may be lost or altered due to overflow or truncation.
+Larger types cast to smaller types may lose data.
 
 ### Example: long to int
 
 ```java
 public class DataLossExample {
     public static void main(String[] args) {
-        long l = 2147483648L; // Beyond int range
+        long l = 2147483648L;
         int i = (int) l;
         System.out.println("Long value: " + l);
         System.out.println("Int value after casting: " + i);
@@ -1238,9 +1319,7 @@ Long value: 2147483648
 Int value after casting: -2147483648 (Overflow)
 ```
 
-## 5. Implicit vs Explicit Casting
-
-### Comparison Table
+## 5. Implicit vs Explicit Casting 📊
 
 | Aspect        | Implicit Casting  | Explicit Casting       |
 | ------------- | ----------------- | ---------------------- |
@@ -1249,42 +1328,42 @@ Int value after casting: -2147483648 (Overflow)
 | **Syntax**    | No cast operator  | Requires cast operator |
 | **Direction** | Smaller -> Larger | Larger -> Smaller      |
 
-## 6. Important Points to Remember
+## 6. Important Points 📝
 
-- **Implicit casting** is safe and does not require special syntax.
-- **Explicit casting** should be handled carefully due to potential data loss.
-- Casting between non-compatible types (e.g., `int` to `boolean`) is not allowed.
+- ✅ Implicit casting is safe.
+- ⚠️ Explicit casting risks data loss.
+- ❌ Non-compatible types (e.g., `int` to `boolean`) cannot be cast.
 
-# Java Strings - Complete Notes
+---
 
-Strings in Java are objects that represent sequences of characters. This guide covers their creation, storage, advantages, and key methods with examples.
+# Java Strings - Complete Notes 📜
 
-## 1. Introduction to Strings
+Strings are immutable sequences of characters in Java.
 
-Strings in Java are immutable, meaning once created, they cannot be changed. They are implemented using the `String` class in the `java.lang` package.
+## 1. Introduction 🌟
 
-## 2. String Constant Pool and Memory Storage
+Strings use the `String` class in `java.lang` and are immutable.
 
-Strings are stored in a special memory area called the **String Constant Pool (SCP)** to optimize memory usage. When a string is created using a string literal, it is stored in the SCP to avoid duplication.
+## 2. String Constant Pool 🗄️
+
+Strings are stored in the **String Constant Pool (SCP)** to save memory.
 
 ### Example
 
 ```java
 String s1 = "Hello";
-String s2 = "Hello"; // s1 and s2 refer to the same object in SCP
-String s3 = new String("Hello"); // Stored in heap memory outside SCP
+String s2 = "Hello"; // Same SCP object
+String s3 = new String("Hello"); // Heap memory
 ```
 
-## 3. Ways to Create Strings
+## 3. Ways to Create Strings 🛠️
 
-Strings can be created in the following ways:
+1. String literals (SCP).
+2. `new` keyword (heap).
+3. Character arrays: `new String(char[])`.
+4. Byte arrays: `new String(byte[])`.
 
-1. **Using string literals**: Stored in the String Constant Pool.
-2. **Using `new` keyword**: Stored in heap memory.
-3. **From character arrays**: Using `new String(char[])`.
-4. **From byte arrays**: Using `new String(byte[])`.
-
-### Example: From Character Array
+### Example: Character Array
 
 ```java
 char[] chars = {'J', 'a', 'v', 'a'};
@@ -1298,19 +1377,17 @@ System.out.println(s1);
 Java
 ```
 
-## 4. Advantages of Strings in Java
+## 4. Advantages of Strings ✅
 
-- **Immutability**: Makes strings thread-safe and secure.
-- **Memory Optimization**: The String Constant Pool reduces memory duplication.
-- **Built-in Methods**: The `String` class provides many useful methods.
-- **Ease of Use**: Integrates seamlessly with APIs and libraries.
-- **Versatility**: Widely used in file handling, networking, and user input.
+- **Immutability**: Thread-safe and secure.
+- **Memory Optimization**: SCP reduces duplication.
+- **Built-in Methods**: Rich functionality.
+- **Ease of Use**: API integration.
+- **Versatility**: Used in file handling, networking, etc.
 
-## 5. Important String Methods with Examples
+## 5. Important String Methods 📋
 
 ### Method: length()
-
-Returns the length of the string.
 
 ```java
 String str = "Hello";
@@ -1325,8 +1402,6 @@ System.out.println(str.length());
 
 ### Method: charAt()
 
-Returns the character at the specified index.
-
 ```java
 String str = "Hello";
 System.out.println(str.charAt(1));
@@ -1339,8 +1414,6 @@ e
 ```
 
 ### Method: substring()
-
-Returns a substring starting from the specified index.
 
 ```java
 String str = "HelloWorld";
@@ -1355,8 +1428,6 @@ World
 
 ### Method: contains()
 
-Checks if the string contains a specified sequence of characters.
-
 ```java
 String str = "OpenAI ChatGPT";
 System.out.println(str.contains("Chat"));
@@ -1369,8 +1440,6 @@ true
 ```
 
 ### Method: equals()
-
-Compares two strings for equality.
 
 ```java
 String a = "Java";
@@ -1386,8 +1455,6 @@ true
 
 ### Method: equalsIgnoreCase()
 
-Compares two strings for equality, ignoring case.
-
 ```java
 String a = "Java";
 String b = "java";
@@ -1402,8 +1469,6 @@ true
 
 ### Method: toLowerCase()
 
-Converts the string to lowercase.
-
 ```java
 String str = "HELLO";
 System.out.println(str.toLowerCase());
@@ -1416,8 +1481,6 @@ hello
 ```
 
 ### Method: toUpperCase()
-
-Converts the string to uppercase.
 
 ```java
 String str = "hello";
@@ -1432,8 +1495,6 @@ HELLO
 
 ### Method: trim()
 
-Removes leading and trailing whitespace.
-
 ```java
 String str = "  Hello  ";
 System.out.println(str.trim());
@@ -1447,8 +1508,6 @@ Hello
 
 ### Method: replace()
 
-Replaces all occurrences of a specified character with another.
-
 ```java
 String str = "banana";
 System.out.println(str.replace('a', 'o'));
@@ -1461,8 +1520,6 @@ bonono
 ```
 
 ### Method: split()
-
-Splits the string into an array based on a delimiter.
 
 ```java
 String str = "a,b,c";
@@ -1478,8 +1535,6 @@ b
 
 ### Method: indexOf()
 
-Returns the index of the first occurrence of a specified character.
-
 ```java
 String str = "programming";
 System.out.println(str.indexOf('g'));
@@ -1492,8 +1547,6 @@ System.out.println(str.indexOf('g'));
 ```
 
 ### Method: lastIndexOf()
-
-Returns the index of the last occurrence of a specified character.
 
 ```java
 String str = "programming";
@@ -1508,8 +1561,6 @@ System.out.println(str.lastIndexOf('g'));
 
 ### Method: startsWith()
 
-Checks if the string starts with a specified prefix.
-
 ```java
 String str = "Java";
 System.out.println(str.startsWith("Ja"));
@@ -1523,8 +1574,6 @@ true
 
 ### Method: endsWith()
 
-Checks if the string ends with a specified suffix.
-
 ```java
 String str = "Java";
 System.out.println(str.endsWith("va"));
@@ -1536,13 +1585,15 @@ System.out.println(str.endsWith("va"));
 true
 ```
 
-# Java Arrays - Detailed Notes
+---
 
-Arrays in Java are data structures that hold a fixed number of values of a single type. This guide covers their creation, initialization, traversal, advantages, and multi-dimensional arrays.
+# Java Arrays - Detailed Notes 🗃️
 
-## 1. Introduction to Arrays in Java
+Arrays store fixed-size collections of the same type.
 
-An array is a fixed-size data structure that stores elements of the same type. Once created, its length cannot be changed.
+## 1. Introduction 📖
+
+Arrays have a fixed length once created.
 
 ### Syntax
 
@@ -1568,9 +1619,9 @@ System.out.println(numbers[2]);
 30
 ```
 
-## 2. Array Initialization and Access
+## 2. Array Initialization and Access 🔄
 
-Arrays can be initialized directly with values or by assigning values to specific indices. Elements are accessed using zero-based indices.
+Arrays can be initialized directly or via indices.
 
 ### Example
 
@@ -1585,11 +1636,11 @@ System.out.println(nums[0]);
 1
 ```
 
-## 3. Looping through Arrays
+## 3. Looping through Arrays 🔁
 
-Arrays can be traversed using traditional `for` loops or enhanced `for` loops (for-each).
+Use `for` or `for-each` loops.
 
-### Example: Using for Loop
+### Example: for Loop
 
 ```java
 int[] arr = {10, 20, 30};
@@ -1606,7 +1657,7 @@ for (int i = 0; i < arr.length; i++) {
 30
 ```
 
-### Example: Using Enhanced for Loop
+### Example: for-each Loop
 
 ```java
 int[] arr = {10, 20, 30};
@@ -1623,17 +1674,17 @@ for (int num : arr) {
 30
 ```
 
-## 4. Advantages of Arrays
+## 4. Advantages of Arrays ✅
 
-- **Random Access**: Elements can be accessed directly using indices.
-- **Ease of Traversal**: Loops make it simple to iterate over elements.
-- **Memory Efficiency**: Fixed size ensures efficient memory allocation when size is known.
-- **Reduced Complexity**: Stores multiple values in a single variable.
-- **Performance**: Faster for accessing and modifying data compared to some other data structures.
+- **Random Access**: Direct index access.
+- **Ease of Traversal**: Simple looping.
+- **Memory Efficiency**: Fixed size.
+- **Reduced Complexity**: Single variable for multiple values.
+- **Performance**: Fast access/modification.
 
-## 5. Two-Dimensional Arrays
+## 5. Two-Dimensional Arrays 📊
 
-Two-dimensional (2D) arrays are arrays of arrays, commonly used to represent matrix-like data.
+Arrays of arrays, used for matrices.
 
 ### Syntax
 
@@ -1665,28 +1716,28 @@ for (int i = 0; i < matrix.length; i++) {
 7 8 9
 ```
 
-# Types of Variables in Java
+---
 
-In Java, variables are classified into three main types: **Instance Variables**, **Static Variables (Class Variables)**, and **Local Variables**. Each type has distinct scope, lifetime, and storage behavior. This guide explores each type with code examples and outputs.
+# Types of Variables in Java 📋
 
-## 1. Instance Variables
+Variables in Java are classified into three types based on scope and storage.
+
+## 1. Instance Variables 🧑
 
 ### Definition
 
-- Declared inside a class but outside any method or constructor.
-- Each object of the class has its own copy.
+- Declared in a class, outside methods.
+- Each object has its own copy.
 - Stored in heap memory.
-- Accessible only through an object reference.
 
 ### When to Use
 
-- When each object needs to maintain its own state or data.
+- For object-specific data.
 
 ### Example
 
 ```java
 public class Student {
-    // Instance variables
     String name;
     int age;
 
@@ -1718,25 +1769,22 @@ Name: Bob
 Age: 22
 ```
 
-## 2. Static Variables (Class Variables)
+## 2. Static Variables (Class Variables) 🏛️
 
 ### Definition
 
-- Declared with the `static` keyword inside a class but outside any method or constructor.
-- Belongs to the class, not individual objects.
-- Stored in the method area.
-- Loaded when the class is loaded.
-- Can be accessed without creating an object.
+- Declared with `static`, belongs to the class.
+- Stored in method area.
+- Accessed without objects.
 
 ### When to Use
 
-- When a property is shared among all objects (e.g., a constant or counter).
+- For shared data across objects.
 
 ### Example
 
 ```java
 public class Counter {
-    // Static variable
     static int count = 0;
 
     public Counter() {
@@ -1758,25 +1806,23 @@ public class Counter {
 Total objects created: 3
 ```
 
-## 3. Local Variables
+## 3. Local Variables 📍
 
 ### Definition
 
-- Declared inside a method, constructor, or block.
-- Scope is limited to the block where they are declared.
-- Stored in the stack memory.
-- Must be initialized before use, as they do not have a default value.
+- Declared in methods or blocks.
+- Stored in stack memory.
+- Must be initialized.
 
 ### When to Use
 
-- When a variable is needed only within a specific method or block.
+- For temporary data in a method.
 
 ### Example
 
 ```java
 public class LocalVariableExample {
     public static void main(String[] args) {
-        // Local variable
         int sum = 0;
         for (int i = 1; i <= 5; i++) {
             sum += i;
@@ -1792,22 +1838,24 @@ public class LocalVariableExample {
 Sum of numbers 1 to 5: 15
 ```
 
-# This, Super, and Constructor Chaining in Java
+---
 
-This guide covers the `this` keyword, `super` keyword, and constructor chaining in Java, including their uses, syntax, and examples.
+# This, Super, and Constructor Chaining in Java 🔗
 
-## 1. The `this` Keyword in Java
+This guide covers `this`, `super`, and constructor chaining.
 
-The `this` keyword is a reference variable that refers to the current object. It is used to avoid naming conflicts, invoke methods or constructors of the current class, and pass the current object as an argument.
+## 1. The `this` Keyword 📍
 
-### Uses of `this`
+Refers to the current object.
 
-1. Refer to current class instance variables.
-2. Invoke current class methods.
-3. Invoke current class constructors using `this()`.
-4. Pass the current object as an argument.
+### Uses
 
-### Example 1: Referring to Instance Variables
+- ✅ Refer to instance variables.
+- ✅ Invoke class methods.
+- ✅ Invoke constructors (`this()`).
+- ✅ Pass current object as an argument.
+
+### Example 1: Instance Variables
 
 ```java
 class Student {
@@ -1815,7 +1863,7 @@ class Student {
     String name;
 
     Student(int id, String name) {
-        this.id = id; // Refers to instance variable
+        this.id = id;
         this.name = name;
     }
 
@@ -1836,7 +1884,7 @@ class Student {
 1 John
 ```
 
-### Example 2: Invoking Current Class Method
+### Example 2: Invoking Method
 
 ```java
 class Example {
@@ -1861,7 +1909,7 @@ class Example {
 Show method
 ```
 
-### Example 3: Invoking Constructor with `this()`
+### Example 3: Invoking Constructor
 
 ```java
 class Person {
@@ -1887,17 +1935,17 @@ Parameterized constructor: Default Name
 No-arg constructor
 ```
 
-## 2. The `super` Keyword in Java
+## 2. The `super` Keyword 🦸
 
-The `super` keyword is a reference variable that refers to the immediate parent class object. It is used to access parent class members (fields, methods, or constructors) when they are overridden or hidden in the subclass.
+Refers to the parent class object.
 
-### Uses of `super`
+### Uses
 
-1. Refer to parent class instance variables.
-2. Invoke parent class methods.
-3. Invoke parent class constructors using `super()`.
+- ✅ Refer to parent variables.
+- ✅ Invoke parent methods.
+- ✅ Invoke parent constructors (`super()`).
 
-### Example: Using `super` for Parent Class Constructor
+### Example
 
 ```java
 class Animal {
@@ -1908,7 +1956,7 @@ class Animal {
 
 class Dog extends Animal {
     Dog() {
-        super(); // Calls parent class constructor
+        super();
         System.out.println("Dog constructor");
     }
 
@@ -1925,17 +1973,17 @@ Animal constructor
 Dog constructor
 ```
 
-## 3. Constructor Chaining
+## 3. Constructor Chaining 🔄
 
-Constructor chaining occurs when one constructor calls another constructor in the same class (using `this()`) or in the parent class (using `super()`). This allows reuse of initialization code and ensures proper construction of objects.
+Calls constructors within the same or parent class.
 
-### Rules for Constructor Chaining
+### Rules
 
-- The `this()` or `super()` call must be the first statement in a constructor.
-- `this()` is used to call another constructor in the same class.
-- `super()` is used to call a constructor in the parent class.
+- `this()` or `super()` must be the first statement.
+- `this()`: Same class constructor.
+- `super()`: Parent class constructor.
 
-### Example: Constructor Chaining with `this()` and `super()`
+### Example
 
 ```java
 class Vehicle {
@@ -1951,12 +1999,12 @@ class Car extends Vehicle {
     int speed;
 
     Car() {
-        this(100); // Calls parameterized constructor in the same class
+        this(100);
         System.out.println("No-arg constructor");
     }
 
     Car(int speed) {
-        super("Toyota"); // Calls parent class constructor
+        super("Toyota");
         this.speed = speed;
         System.out.println("Car constructor with speed: " + speed);
     }
