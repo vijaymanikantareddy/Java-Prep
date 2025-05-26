@@ -1,8 +1,10 @@
 
 public class Test {
 	public int b;
+
 	public static void main(String args[]) {
-		int a;
-		System.out.println(b);
+		int a = 10;
+		;
+		System.out.println(a);
 	}
 }
