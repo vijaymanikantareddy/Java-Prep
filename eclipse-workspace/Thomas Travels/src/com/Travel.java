@@ -1,6 +1,5 @@
 package com;
 
-import java.util.ArrayList;
 import com.Driver;
 
 public class Travel {
@@ -12,7 +11,7 @@ public class Travel {
 		}
 	}
 
-	public String retrivebyDriverId(ArrayList<Driver> drivers, int driverId) {
+	public String retrivebyDriverId(Driver[] drivers, int driverId) {
 		Driver needDriver = null;
 		for (Driver driver : drivers) {
 			if (driver.getDriverId() == driverId) {
@@ -26,7 +25,7 @@ public class Travel {
 		return result;
 	}
 
-	public int retriveCountOfDriver(ArrayList<Driver> drivers, String category) {
+	public int retriveCountOfDriver(Driver[] drivers, String category) {
 		int countOfDriver = 0;
 		for (Driver driver : drivers) {
 			if (driver.getCategory().equals(category)) {
@@ -36,17 +35,18 @@ public class Travel {
 		return countOfDriver;
 	}
 
-	public ArrayList<Driver> retriveDriver(ArrayList<Driver> drivers, String category) {
-		ArrayList<Driver> driversInCategory = new ArrayList<>();
+	public Driver[] retriveDriver(Driver [] drivers, String category) {
+		Driver[] driversInCategory = new Driver[3];
+		int index = 0;
 		for (Driver driver : drivers) {
 			if (driver.getCategory().equals(category)) {
-				driversInCategory.add(driver);
+				driversInCategory[index++] = driver;
 			}
 		}
 		return driversInCategory;
 	}
 
-	public Driver retriveMaximumDistanceTravelledDriver(ArrayList<Driver> drivers) {
+	public Driver retriveMaximumDistanceTravelledDriver(Driver[] drivers) {
 		int maxDistance = 0;
 		for (Driver driver : drivers) {
 			if (driver.getTotalDistance() > maxDistance) {
@@ -58,6 +58,6 @@ public class Travel {
 				return driver;
 			}
 		}
-		return drivers.getFirst();
+		return drivers[0];
 	}
 }
