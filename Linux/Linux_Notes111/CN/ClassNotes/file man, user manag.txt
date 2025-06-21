@@ -1,0 +1,161 @@
+
+
+Cryptography:
+- study of mathematical alg that helps to securely communicate in insecured env i..e, internet 
+
+common terminologies in cryptography:
+
+plain text : msg or information 
+cipher text : group of random characters that really do not display any info 
+encryption : process of converting plain text to cipher text using key 
+decryption : process of converting cipher text to plain text using key 
+key : group of characetrs used in encry, decry 
+
+
+virat --> dhoni 
+
+
+virat --> HBD (plain msg) --> encryption (key) --> cipher text --> internet --> destination 
+destination --> decryption (key) -->  plain text --> DHONI 
+
+
+types of cryptography:
+
+communication: (two way functions)
+1. private key or symmetric key cryptography 
+2. public key or assymetric key cryptography
+
+data integrity: (one way function)
+3. Hashing 
+
+-------------------------------------------------------------------------------------------------------
+
+file permissions:
+
+- very important 
+- directly impact on security of os 
+
+using chmod command:
+
+- change mode 
+- used to change permissions for a file 
+
+permissions in os 
+
+read(r) : we can access data inside file/folder 
+write(w) : we can change /alter data in file/folder 
+execute(x): we can execute/ run file 
+
+permissions are given to three set of people
+
+owner(u): who actually creates the file/folder 
+group(g): every user is associated with a group 
+others(o): everyone other than group and owner comes under others 
+
+ls -l 
+
+drwxrwxrwx
+
+d : file / folder 
+rwx : permissions of owner 
+rwx : group permissions 
+rwx : other permissions 
+
+
+we can change permissions of a file/ folder using 2 ways 
+
+1. using operators 
+
++ : add a permission 
+- : removes a permission 
+= : replicates permission 
+
+
+	Eg: chmod u+x file 
+		chmod u-x,g+w,o+r abc 
+		chmod u=rwx abc 
+		chmod a+x abc 
+
+2. using numeric codes 
+
+rwx 
+
+000 - 0 - no permissions
+001 - 1 - execute
+010 - 2 - write 
+011 - 3 - write and execute 
+100 - 4 - read 
+101 - 5 - read and execute 
+110 - 6 - read and write 
+111 - 7 - all permissions 
+
+	Eg: chmod 123 abc 
+		chmod 456 abc 
+		chmod 777 abc 
+		
+		
+		
+---------------------------------------------------------------------------
+
+user management:
+
+Adding user:
+
+using adduser command:
+- used to add a new user into linux os 
+
+backend process:
+
+- controller will edit the following files 
+	/etc/passwd 
+	/etc/shadow
+	/etc/group
+	/etc/gshadow 
+	
+- creating a new directory in home folder
+- assigning required default permissions to the new folder created 
+
+
+/etc/passwd 
+- information about users in linux os 
+
+kali:x:1000:1000:,,,:/home/kali:/usr/bin/zsh
+
+kali : username 
+x : password is stored in /etc/shadow 
+1000 : uid 
+1000 : gid 
+,,,, : info abou user 
+/home/kali : user info folder 
+/usr/bin/zsh : shell associated with the user 
+
+
+	Eg: adduser username 
+		adduser -u 8765 pop 
+		adduser -u 6578 -gid 8765 bob 
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

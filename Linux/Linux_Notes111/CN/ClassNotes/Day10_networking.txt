@@ -1,0 +1,168 @@
+
+
+TLS Handshaking:
+
+Client Hello:
+- TLS version 
+- client supported ciphers (c1,c2,c3,c4)
+- client random (random strings)
+
+Server hello:
+- selected cipher (c3)
+- server certificate (server public key)
+- server random (random string)
+
+Client Authentication:
+- client verifies the server certificate 
+
+premaster key secret (random strings):
+- client sends a master key by encrypting it with server public key 
+
+client:
+client random, server random, premaster key 
+
+server:
+server random, client random, premaster key 
+
+- Both server and client generates a symmetric key 
+
+- symmetric key cryptography connection 
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+kill signals:
+- way of communicating a message from one process to another is a signal 
+- kill signal in linux does not only stop processes 
+- pause, restart, terminate, suspend, wait, continue 
+
+
+	Eg: kill -signal pid 
+	
+		kill -2 pid, kill -SIGINT pid (ctrl + c)
+		kill -3 pid, kill -SIGQUIT pid (ctrl + d)
+		kill -9 pid, kill -SIGKILL pid 
+		kill -15 pid, kill -SIGTERM pid 
+		kill -17,19,23 pid , kill -SIGSTOP pid 
+		
+		
+		
+Networking:
+
+- ifconfig -a = command used to display network configuration of all available network interfaces 
+
+- hostname = machine hostname 
+- hostname -i = display machine ip address 
+- host = DNS acativity 
+	Eg: host instagram.com 
+	
+- netstat
+
+	Eg: netstat -l 
+		netstat -t
+
+port: software gate (data out , data in)
+
+1- 65535 ports 
+
+1- 1024 default ports 
+
+
+ssh 22
+http 80 
+dns 53 
+https 443 
+
+
+ping google.com : used to check whether our system is reachable 
+to google.com or not 
+
+ping -c 4 google.com 
+
+dig = query DNS information 
+
+whois 
+
+
+
+
+
+
+
+
+
+
+
+
+
+192.168.43.102
+
+32 bits 
+
+4 * 8 bits 
+
+
+2^8 = 256 
+
+0 - 255
+
+
+192.168.43.0 ---- 192.168.43.255 
+
+256 devices 
+
+192.168.43.1 - gateway 
+192.168.43.255 - broadcast address 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+

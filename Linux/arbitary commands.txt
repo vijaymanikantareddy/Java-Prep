@@ -1,0 +1,174 @@
+
+
+Arbitary Commands:
+
+- alias
+	- giving another name to a command 
+	Eg: alias dhoni='ls -l'
+		unalias dhoni : remove command associated with dhoni 
+		
+		
+- crontab 
+	- used to schedule to execute a command 
+	Eg: crontab -e 
+		crontab -l 
+		
+		
+- grep 
+	- global search for regular expression and print matching 
+	- used to search for pattern in file/ files 
+	Eg: grep options pattern file 
+	
+	
+- using df command
+	- used to display free space of a memory drive 
+	Eg: df / 
+		df /home
+		df -h /home/kali
+		
+		
+- Symbols
+	- $
+		- variable value extraction 
+		Eg: echo $PATH, echo $SHELL, echo $HOME 
+		- $ : represents normal user 
+		- # : root user 
+		- $$ : pid 
+		- $? : status of last command executed 
+			- 0 : successful, non zero : unsuccesful 
+		- $0 : command 
+		- echo $((4+3))
+		
+	- ~
+		- represents home directory 
+		
+	- /
+		- represents root folder 
+		
+	- .
+		- represents current folder 
+		
+	- ..
+		- represents parent folder 
+		
+	- *
+		- wildcard 
+		- 3 files : file111.txt, file22.txt. file3.txt 
+			Eg: rm file*.txt 
+			
+	- ?
+		- single character wildcard 
+		- 3 files : file111.txt, file22.txt. file3.txt 
+			Eg: rm file?.txt 
+			
+	- # 
+		- comments in linux 
+		- everything after # is treated as comments 
+		Eg: ls # this is to print content of a folder 
+		
+	- |
+		- pipe 
+		- used to send output of a command as input to another command 
+		Eg: top | head -n 3
+		
+		
+	- >
+		- redirection operator 
+		- direct output of a command into arbitary file rather than standard output file f1
+		Eg: echo "hello world" > echo.txt
+			dhoni 2> error.log
+		
+		
+	- >>
+		- double redirection operator 
+		- direct output of a command into arbitary file rather than standard output file f1
+		- it appends new data to old data 
+		Eg: echo "enti mari inka" >> echo.txt 
+		
+		
+	- < 
+		- input redirection 
+		Eg: sort < names.txt 
+		
+		
+	- &
+		- used to create background process 
+		
+	- && 
+		- logical AND 
+		- used to execute 2 or more commands one after another 
+		Eg: ls && sleep 5 
+			dhoni && ls
+		
+	- ||
+		- logical OR 
+		- used to execute second command if first command failed 
+		Eg: dhoni || ls 
+			ls || dhoni || ls
+			
+	- ; 
+		- represents end of line 
+		- used to execute multiple commands in a single line 
+		Eg: ls; ls -l; cd /; ls 
+		
+	- ()
+		- creates a sub shell 
+		- commands in () will be executed seperately irrespective of current shell 
+		Eg: (cd /;ls)
+		
+- type 
+	- display how command is interpreted by shell 
+	- builin, download, alias, function etc 
+	Eg: type cd 
+
+- history 
+	- used to display previous commands 
+	Eg: history 
+		!number : execute number command 
+		
+		
+- using sleep command:
+	- used to do nothing for specified aqmount of time 
+	Eg: sleep 5
+		sleep 10s
+		sleep 1m 
+		
+		
+- using wc command:
+	- used to count number of lines, words, characters in a file 
+	Eg: wc filename 
+		wc -l file 
+		wc -w file 
+		wc -c file 
+		
+
+- using tee command:
+	- if o/p of a command have to go to both f1 and arb file we use tee 
+	Eg: ls -l | tee teeop.txt 
+	
+
+- sed, awk 
+- wget 
+
+
+AI tools:
+
+https://elevenlabs.io/conversational-ai
+
+https://app.lmnt.com/
+
+https://chatter-box.ai/
+
+https://bloom.diy/
+
+https://www.sarvam.ai/
+
+https://bolt.new/
+
+https://chai.new/
+
+https://elevenlabs.io/
+
+https://huggingface.co/ResembleAI/chatterbox
+
+https://browser-use.com/

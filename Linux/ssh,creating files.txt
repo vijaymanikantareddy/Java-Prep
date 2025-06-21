@@ -1,0 +1,63 @@
+
+
+URL:
+	- uniform resource locator 
+	- used to locate/identify resources in the internet 
+	- text, image, video, html, css, js, python, php, java etc
+
+	Eg: https://subdomain.domain.com:8080/path/to/resources?key=value#fragment 
+	
+		https: protocol 
+		domain: 
+		sub domain: 
+		.com: tld
+
+--------------------------------------------------------------------------
+
+ssh:
+	- secure shell 
+	- service used to remotely control a device/system 
+	- both systems should be in same network 
+
+linux:
+	- service ssh status 
+	- service ssh start 
+	- service ssh restart 
+	- service ssh stop 
+	
+	- ssh user@server 
+		
+		
+modifying files and directories:
+
+Creating files:
+
+- using touch command:
+	- used to create files 
+	- light weight command 
+	- if file already exist, it update last modified time 
+	- if file not present it will create new file 
+	Eg: touch filename 
+	
+- using redirection operator(>):
+	- in linux everything is a file 
+	- by default we have 3 file descriptors 
+		- file 0 
+			- input file 
+		- file 1 
+			- output 
+		- file 2
+			- error 
+			
+			
+
+- command execution:
+	- terminal -> shell -> command rasanu -> file0 -> shell search in PATH -> binary code 
+	-> execute ( process ) -> output -> file1/file2 -> monitor 
+	
+	
+- using cat command:
+	- cat combined with > can create new file 
+	- we can actually insert data into file when creating it 
+	- ctrl+d is used to come out of cat prompt 
+	Eg: cat > cat.txt 

@@ -1,0 +1,107 @@
+
+
+OS Videos:
+https://www.youtube.com/watch?v=jciGIvn7UfM&list=PLyqSpQzTE6M9SYI5RqwFYtFYab94gJpWk
+
+
+Types of Processes:
+
+- Parent Process:
+	- in linux every process contains parent process 
+	- even processes that we create in terminal has parent process 
+	- kernel will be parent process for terminal process 
+	
+- Child Process:
+	- process created by another process 
+	
+- Orphan Process:
+	- child process should complete it's execution first before parent process 
+	- if parent process completes it's execution before child process
+	- then child process is orphan process 
+	
+- Zombie Process:
+	- process that is still in ps even after execution completion 
+	- they do not consume any cpu 
+	
+- Daemon Process:
+	- system background processes 
+	
+	
+Commands:
+
+- using ps 
+	- it display current processes in the terminal 
+	- process state 
+	Eg: ps 
+		ps -e : display running daemons 
+		ps -f : processes info in full form 
+		ps -ef 
+		ps aux : list every process running in the linux os 
+		
+- jobs
+	- used to display running or suspended processes in the background 
+	
+- creating a background process
+	- we have to add "&" after command to make it run in background 
+	Eg: ls & 
+		whoami & 
+		
+- bringing background process to foreground
+	- fg % PID 
+
+
+
+
+- videostreaming.c 
+	- thread1 
+		- audio 
+	- thread2 
+		- video 
+	- thread3 
+		- audio+video 
+	- thread4 
+		- stream 
+		
+		
+		
+fun1(){
+fun2();
+}
+
+fun2(){
+fun3();
+}
+
+fun3(){
+printf();
+}
+
+main(){
+fun1();
+}
+
+
+proc1{
+
+proc2{
+
+proc3{
+
+prf();
+
+}
+
+}
+
+}
+
+
+
+shell(){
+
+if fork('cmd') ==0;
+	parent process 
+else 
+	child process 
+	
+	}

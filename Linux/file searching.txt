@@ -1,0 +1,56 @@
+
+docker 
+
+
+- using help option:
+	- used to display short info about options in a command 
+	Eg: command -h 
+		command --help
+
+
+- using man command:
+	- manual 
+	- used to display official documentation about the command 
+	Eg: man command 
+	
+	
+	
+finding stuff:
+
+- using locate command:
+	- which is used to locate or find a file/folder 
+	- light weight process 
+	- check database for file we are searching for 
+	- database will be updated once in a day 
+	Eg: locate file 
+		locate -i filename 
+		
+		
+- using whereis command:
+	- used to search for a binary file 
+	- it will display the path of binary file and man pages if available 
+	Eg: whereis binaryfile 
+	
+	
+- using which command:
+	- used to search for binary files 
+	- it specifically search in PATH variable 
+	Eg: which binaryfile 
+	
+	
+- using find command:
+	- used to search for file / folders 
+	- used in real time 
+	- it searches on basis of real file system not on any database 
+	- it provides multiple options in searching for a filr/ folder 
+	- name, users, date, group, permissions, size, file type etc
+	Eg: find / -name filename 
+		find /home/kali -name filename 
+		find / -type d -name foldername 
+		find / -perm 0644 
+		
+	
+	
+
+	
+	

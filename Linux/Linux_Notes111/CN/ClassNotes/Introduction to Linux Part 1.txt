@@ -1,0 +1,39 @@
+
+
+Computer:
+- electronic device that performs tasks like browsing internet , playing videos, mp3
+executing programs, applications etc with some mathematical cal behind
+
+- computer can understand binary lang (0,1)
+
+computers -> CPU -> CHIPS -> ALU -> Gates (and,or,not,nand,nor) -> transistors (switch)
+
+
+Operating System:
+- software/ program whiuch acts as a interface b/w the user and the computer hardware 
+- OS controls execution of all kinds of pragorams 
+
+- EG: windows, linux, macos, android 
+
+some of imp functions of OS
+
+1. process management 
+2. memory management 
+3. Device management 
+4. security 
+5. Coordination b/w softwares
+5. system performance 
+6. job accounting 
+7. schediling 
+8. error detections 
+
+History:
+
+- computers are as big as  a room 
+- very difficult to operate 
+- every computer has a different OS 
+- every softwre is designed seperately for differnet os 
+- expensive 
+- normal people cannot afford as these are expensive and difficult to understand 
+
+ 

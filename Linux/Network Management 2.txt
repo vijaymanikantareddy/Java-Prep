@@ -1,0 +1,23 @@
+
+
+
+ping
+	- used to check whether our system can reach destination or not 
+	Eg: ping www.google.com 
+		ping -c 4 www.google.com 
+		
+		
+ip
+	- used to perform network admin tasks 
+	Eg: ip route, ip addr show
+	
+
+dig 
+	- query DNS information of a domain 
+	Eg: dig www.instagram.com 
+	
+	
+bmon
+	- bandwidth monitor 
+	- display bandwidth of different network interfaces 
+	Eg: bmon 

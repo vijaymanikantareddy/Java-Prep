@@ -1,0 +1,161 @@
+
+
+1. private or symmetric key cryptography 
+
+- using a same key for both encryption and decryption 
+- source , destination will be using same key 
+- execution will be fast 
+- key sharing will be the biggest challange
+- caesar cippher, block cipher, aes, des and more 
+
+virat --> HBD (plain msg) --> encryption (123) --> cipher text --> internet --> destination 
+destination --> decryption (123) -->  plain text --> DHONI 
+
+------------------------------------------------------------------------------------------------
+
+
+Removing user:
+
+using userdel command:
+- user delete
+- used to remove a user from linux os 
+
+	Eg: userdel dhoni 
+		userdel -r virat 
+		userdel -r -f rohit 
+		
+		
+sudo passwd root - change root password 
+su root - change from kali to root account 
+
+
+Software management:
+
+- important feature 
+- we do install/uninstall third party software into OS 
+- we do update our softare/os 
+
+- in debian systems software is managed by using apt tool 
+
+
+using apt tool:
+
+- advanced packeging tool 
+- we can search, install, remove a software from linux os 
+
+
+Searching for a package:
+- in linux os even before adding a software we can search for particular package 
+- we have to used keyword search to search for a package 
+
+	Eg: apt-cache search software 
+		apt-cache search nmap 
+		
+		
+Adding / Installing a software:
+- using install keyword along with apt 
+
+	Eg: apt-get install software 
+		apt-get install nmap 
+		
+		
+Removing a software:
+- we do have 2 kinds of removing keywords 
+
+- using remove keyword 
+- it will be removing only the software but not it's config file 
+
+	Eg: apt-get remove nmap 
+	
+- using purge option 
+- remove software along with it's configuration files 
+
+	Eg: apt-get purge nmap 
+	
+	
+	
+updating system:
+- updating software/ app/ os is very important as updates brings 
+- add security
+- add new features to our software 
+
+- in linux updates wont reach us automatically as in windows 
+- we have to manually update our system 
+
+- in linux os we do have two kinds of updates 
+
+- update , - upgrade 
+
+
+- update
+- it updates the list of software, applications that are ready to get update 
+
+	Eg: sudo apt-get update 
+	
+	
+upgrade 
+- it actually updates every software that has updates 
+
+	Eg: sudo apt-get upgrade 
+	
+	
+Repository:
+
+- repo
+- server that holds the software for a particular distribution 
+- every distro will be having a repo 
+
+	Eg: nano /etc/apt/sources.list 
+	
+	
+Process Management:
+
+- program in execution 
+- in linux, unlike windows all commands run on terminal/shell 
+- tuning or controlling execution of a preocess is process management 
+
+any process can be run in 2 ways:
+
+foreground process :
+- by default every process run as foreground process 
+- process that runs on terminal 
+- until foreground process completes it's execution we cannot use terminal 
+
+background process :
+- process which run on background 
+- we can use terminal even background process do not completes it's execution 
+- we have to manually create background process 
+
+
+Types of processes:
+
+parent process:
+- process created by the user 
+- all processes will have a parent process 
+- kernel perocess will be parent processes if process is called by user directly 
+
+child process:
+- process created by another process 
+
+orphan process:
+- if a parent process completes it's execution even before child process 
+- child process becomes orphan process 
+- init process will be new parent for orphan process 
+
+zombie process:
+- if a process competes it's execution but shows up in process status 
+- then it is called zombie process 
+
+Daemon Process:
+- system-related background processes 
+
+
+
+
+
+
+
+
+
+
+

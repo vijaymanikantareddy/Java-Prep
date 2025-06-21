@@ -1,0 +1,24 @@
+
+
+
+top:
+	- used to display real time info about processes that are currently running 
+	
+	
+PID : process ID 
+User : which has initiated the process 
+pr : process priority 
+virt : virtual memory 
+ni : nice value 
+res : physical ram 
+shr : shared memory   
+%cpu : percentage of cpu used
+%mem : percentagememory used 
+command : command that create the process 
+
+IPC: inter process communication 
+	- shared memory 
+	- message passing 
+	- pipes 
+	
+	

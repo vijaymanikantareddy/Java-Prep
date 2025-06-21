@@ -1,0 +1,43 @@
+
+
+install wireshark 
+capture traffic data packets 
+chek it out 
+
+---------------------------
+
+utf - 8,16,32
+
+------------------------------------------------------
+
+- using chown command:
+	- used to change ownership 
+	- we can change user owner ship for a file 
+	- we can also change owner grp for a file 
+	
+	Eg: chown uid filename 
+		chown :gid filename 
+		chown uid:gid filename 
+		chown -h / chown --help
+		
+		
+- software management:
+	- it is necessary for every os to install extra software apart from the software given 
+	during installation 
+	-
+	
+	
+ascii 
+	- character to binary conv 
+	- 1 character will take 8 bits 
+	- 2^8 = 256 characters 
+	- ascii can only hold 128 characters 
+	- 8 bits 
+	- msb ( 1 0 1 1 0 0 1 0 ) lsb
+	
+	
+అమ్మ
+
+2^32 = 4,294,967,296 characters 
+
+

@@ -1,0 +1,108 @@
+
+
+learn about stack, heap memory
+browser functionality 
+
+
+----------------------------------------------------------------------------------
+
+TLS Handshaking:
+	- used to establish https connection between server and client 
+	- transport layer security 
+	- current version : 3.0 
+	- same as ssl ( secure socket layer )
+	
+1. client hello message 
+	- hello msg 
+	- available cipher suites 
+	- client random : group of characters (VG6&8Hf$#$er%)
+	
+2. server hello message 
+	- server sends hello msg to client 
+	- server random 
+	- server certificate 
+	- server select one cipher suite from clients available cipher suites 
+	
+3. Authentication
+	- client verify the server cerificate to authenticate the server domain 
+	
+4. Premaster secret key
+	- client sends premaster key by encrypting it with server public key
+	- server public key is in the server certificate 
+	
+5. Private key used
+	- server decrypt the premaster key using it's private key 
+	
+6. Session key creation
+	- client : client random, pre master secret key, server random 
+	- server : server random, client random, pre master key
+	- using an algo both client and server create symmetric key 
+	
+7. Client ready
+	- client sends finished msg to server 
+
+8. Server Ready 
+	- Server sends finished msg to client 
+	
+9. secured symmetric encryption communication
+
+
+------------------------------------------------------------------------------------
+
+Process Management:
+
+Process:
+	- program in execution 
+	- binary programs ni execute 
+	
+- pcb 
+	- process control block 
+		- used to manage processes by os 
+	- data structure 
+		- double linked list 
+		
+	- Process ID 
+	- Process State 
+		- new, ready, running, waiting, terminate
+	- Priority 
+	- Program Counter 
+	- CPU Registers 
+	- PCB pointers 
+	- open files 
+	- i/o status 
+	- etc 
+	
+
+
+
+#include<stdio.h>
+
+int hack_fun(){
+printf("hack fun");
+return 0;
+}
+
+int main(){
+printf("main fun");
+return 0;
+}
+
+
+- in linux unlike windows every process can be run in terminal 
+- creating user, installing software, managing network, etc can be done in terminal 
+- tuning or controlling process execution is process management 
+
+
+any process can be run in 2 ways:
+
+- foreground process 
+	- process which is running in the terminal 
+	- by default every process is foreground 
+	- when fg process is running we cannot use terminal 
+	
+- back ground process 
+	- process which run in background 
+	- we have to manually crteate back ground processes 
+	- when bg process is running , we can use terminal for other processes 
+	
+	

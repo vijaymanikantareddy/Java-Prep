@@ -1,0 +1,105 @@
+
+
+challenge
+
+---------------------------------------------
+
+- using more command:
+	- used to display content of large files 
+	- it display content of a file in pages 
+	- it loads entire file into cpu at once 
+	Eg: more filename 
+	
+	
+- using less command:
+	- used to display content of large files 
+	- it display content of a file in pages 
+	- it only load current page into cpu 
+	- type / and search for pattern we want 
+	Eg: less filename 
+		less -N filename 
+	
+----------------------------------------------------------
+	
+cd /home/kali/Downloads
+cd ~/Downloads 
+
+/home/kali - pwd 
+
+cd ./Downloads 
+
+/bin
+
+.
+
+
+virat 
+
+~ : /home/virat 
+
+rohit
+
+~ : /home/rohit 
+
+------------------------------------------------------------------------
+
+Changing Permissions:
+
+- in linux everything is a file 
+- file permissions play major role in implementing security 
+
+command: ls -l 
+
+permissions in linux:
+	- there are 3 kinds of permissions 
+	- read(r): used to access data 
+	- write(w): used to change/modify data 
+	- execute(x): used to execute a file 
+	
+in linux permissions can be given to 3 set of people:
+	- owner(u): who creates the file 
+	- group(g): owner linked to group 
+	- others(o): people other than owner, group comes under others
+	- all(a): represnets everyone ( owner, group, others )
+	
+	ls -l 
+	
+	drwxrwxrwx
+	
+	d - directory/file 
+	rwx - owner permissions
+	rwx - group permissions
+	rwx - others permissions
+
+ 
+- in linux permissions can be changed in 2 types 
+
+
+1. using operators:
+	- + : adds a permission
+	- - : removes a permission 
+	- = : replicates permission 
+	
+	Eg: chmod u+x filename 
+		chmod g-w filename 
+		chmod o+r,u-w filename
+		chmod a+x filename 
+		chmod a=rw filename
+		
+		
+2. using numeric code:
+
+rwx 
+000-0- no permissions
+001-1- only execute
+010-2- only write 
+011-3- both write and execute 
+100-4- only read 
+101-5- both read and execute 
+110-6- both read and write 
+111-7- all permissions 
+
+	Eg: chmod 567 filename
+		chmod 320 filename 
+		
+	-rw-r--r-- : 644

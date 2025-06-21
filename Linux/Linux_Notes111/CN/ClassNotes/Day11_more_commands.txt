@@ -1,0 +1,124 @@
+
+
+ip:
+- command line tool to perfoem network admin tasks
+
+	Eg: ip addr
+		ip route 
+		ip address show eth0 
+		
+bmon:
+- bandwidth monitor 
+- used to display real-time bandwidth consumed by the n/w interface
+
+	Eg; bmon 
+	
+ifstat:
+- display IN-OUT packet information of all n/w interfaces 
+
+	Eg: ifstat 
+	
+ifdown eth0:
+- used to take down a particular n/w interface 
+
+ifup eth0:
+- used to turn on a n/w interface 
+
+
+traceroute in linux , tracert in windows:
+- used for n/w trouble shoot 
+- display the information of intermediate routers that our request reach before going to destination 
+
+	Eg: traceroute www.google.com
+		tracert www.google.com 
+
+ethtool:
+- used to display detailed information about n/w interfaces 
+
+			Eg: ethtool eth0 
+			
+
+curl:
+- used to communicate with internet through command prompt, terminal 
+
+	Eg: curl https://www.facebook.com/
+		curl -h 
+		
+		
+		
+other commands:
+
+alias:
+- giving another name to a command 
+
+	Eg: alias dhoni="ls -l"
+	
+	
+crontab:
+- used to schedule a task to get executed in future 
+
+	Eg: crontab -l 
+		crontab -e 
+		
+		
+du:
+- disk usage 
+- display the memory usage of a file 
+
+	Eg: du /home/kali/Downloads 
+		du -h /home/kali/Downloads 
+		
+
+pipe(|):
+- used to redirect output of a command as input to another command 
+
+	Eg: command 1 | command 2 
+		top | head 
+		
+		
+double redirection(>>):
+
+- > = clear previous data and enter new data into a file 
+- >> = it appends new data to old data 
+
+	Eg: ls > cat.txt 
+		cat cron.txt >> cat.txt 
+		
+		
+wc:
+- display no of lines 
+- no of words 
+- no fo characters 
+
+in a file 
+
+	Eg: wc cat.txt 
+	
+	
+tee command:
+
+- command execute will result in displaying o/p of command in terminal 
+- if we use > o/p will be stored in a arbitary file 
+- if we tee command we can display o/p of a command both in terminal and can store it in a arbitary file 
+
+	Eg: ls -l 
+		ls -l > ls.txt 
+		
+		ls -l | tee tee_op.txt 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+

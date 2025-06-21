@@ -1,0 +1,41 @@
+
+
+
+user management:
+
+- used to create/ delete users into linux environment
+
+creating users:
+
+- using adduser command:
+	- used to create a new user into linux os 
+	- during user creation the following process happens
+		- controller edits the following files 
+			- /etc/passwd 
+			- /etc/shadow
+			- /etc/group
+			- /etc/gshadow 
+			
+	/etc/passwd 
+		- kali:x:1000:1000:,,,:/home/kali:/usr/bin/zsh
+			- kali : username 
+			- x : password is in /etc/shadow
+			- 1000 : uid (user id)
+				- unique number given by os to user 
+			- 1000 : gid (group id)
+				- unique number given by os to group 
+			- ,,, : additional info about user 
+			- /home/kali : home directory path 
+			- /user/bin/zsh : shell program 
+				
+				
+	/etc/shadow
+		- $y$j9T$hW9K52EOJBFsViQ7HRz370$//6l5BWkvHl3PTkK6qgZhGFTLOFKR/zVCEwjlZIwAq0
+		
+- encryption/ decryption:
+	- we will discuss in future
+- Hashing:
+	- one way function 
+		- plain text to cipher text ( ardam kani group of characters )
+	- used to check data integrity 
+	- one data hash will be same even if we do for 100 times 

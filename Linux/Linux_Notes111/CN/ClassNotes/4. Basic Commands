@@ -1,0 +1,140 @@
+
+
+what really happens when we access a website..?
+
+1. URL 
+2. DNS 
+3. TCP Handshaking 
+4. TLS Handshaking
+5. HTTP request and response 
+
+-------------------------------------------------------------------------------
+
+
+ctrl + alt + t - open terminal 
+ctrl + shift + "+" - to magnify text 
+
+
+
+cd:
+- change directory 
+- used to traverse b/w the directories 
+
+	Eg: cd / 
+		cd /home/kali 
+		cd /home/kali/downloads 
+		
+		cd . (. - current directory)
+		cd .. (.. - parent directory)
+		
+		
+listing directories:
+
+using ls command:
+- listing 
+- used to display contents of a folder/directory 
+
+	Eg: ls 
+		ls -l 
+		ls -a 
+		
+using dir command:
+
+	Eg: dir 
+		dir -l 
+		dir -F 
+		
+
+Getting Help:
+- many commands 
+- many options 
+- impossible to remember every command every option 
+- '-h' or '--help' 
+- display short help menu will get displayed 
+		
+	Eg: rmdir --help 
+	
+	
+man pages:
+- manual pages 
+- display long description obout the command 
+
+	Eg: man nmap 
+		man ls 
+		
+		
+Finding stuff:
+
+using locate command:
+
+- light weight command 
+- used to find file 
+- it searches for given file in a backend database which updates once in a day
+- problem when we search for a newly created file
+- "sudo updatedb" to manually update backend database 
+
+
+	Eg: locate file 
+		
+
+whereis:
+- used to search for a binary file 
+- it also display manual page if available 
+
+	Eg: whereis locate 
+
+which:
+- used to search for a binary file but it is even more specific 
+- PATH variable 
+
+PATH 
+- env variable 
+- locations of binaries 
+
+	Eg: echo "$PATH"
+	
+	Eg: which locate 
+
+
+find:
+- used to search for a file / folder 
+- real time used command 
+- find do not depend on any database it actually searches on file system 
+- find provides multiple options for searching a file 
+		- name, size, permissions, date, group,user etc 
+		
+	Eg: find / -name filename 
+		find / -iname Filename 
+		find /home/kali -name filename 
+		find / -type d -name fol_name 
+		find / -type f -perm 0644 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

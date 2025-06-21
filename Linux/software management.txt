@@ -1,0 +1,84 @@
+
+
+TLS Handshaking:
+
+Cryptography:
+	- hiding info from the world except source and destination using mathematical alg 
+	
+plain text: msg or data that contains information
+	- Eg: my password is 9876543210
+cipher text: group of characters that do not convey any information 
+	- Eg: Ch&65Hn>?vhGF&6&*H
+encryption: converting plain text to cipher text using key 
+decryption: converting cipher text to plain text using key 
+key: group of characters used in both encryptionand decryption
+
+-----------------------------------------------------------------------------------------
+
+- software management:
+	- it is necessary for every os to install extra software apart from the software given 
+	during installation
+
+- using apt command:
+	- mostly debian distros, ubuntu will use apt to install, uninstall, search for software 
+	- very simple to use 
+	- apt : advanced packeging tool 
+	- in linux updates are not automatic, it has to be done manually 
+	- update and upgrade also done using apt command 
+	
+windows: .exe 
+linux: .sh, .py, executables, .go, .c 
+
+
+Searching for a package:
+	- we can search for a package before downloading / installing it 
+	Eg: apt-cache search package 
+	- search keyword 
+	
+adding/installing a package:
+	- we can install a software easily using install keyword 
+	Eg: apt-get install package 
+	
+removing a package:
+
+- using remove keyword:
+	- we can uninstall a software using remove keyword 
+	- it will only remove package but keep config files as it is
+	Eg: apt-get remove package 
+	
+- using purge keyword:
+	- we can uninstall a software using purge keyword 
+	- it will only remove package and also config files
+	Eg: apt-get purge  package 
+
+
+update/upgrade:
+	- linux updates are not automatic 
+	- complete manual 
+	- updates:
+		- fixing previous security patches/ vuln's 
+		- new features 
+	
+- update:
+	- it updates the list of packages that contains update 
+	- it do not actually update the software 
+	- only update the list
+	Eg: apt-get update 
+	
+	
+- upgrade:
+	- it actually update the software 
+	Eg: apt-get upgrade 
+	
+	
+- repository:
+	- server that contains software for particular linux distro 
+	- nearly every distro has its own repo 
+	- cross distro software will work sometimes 
+	
+	cat /etc/apt/sources.list 
+	
+
+	
+	
+

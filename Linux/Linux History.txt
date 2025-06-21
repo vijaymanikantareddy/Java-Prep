@@ -1,0 +1,48 @@
+
+
+
+- header file in c 
+- what is present in header file
+- who is calling main() in c prog 
+
+
+- later in 1972 c lang was developed by dennis ritchie 
+- unix is rewritten in c
+- unix gains popularity as it uses c which is portable, netwroking, availability 
+- later, linus torvald a finnish student wrote initial version of liux 
+- he posted first version in 1991 
+- torvald wrote linux kernel 
+- os is designed by millions of dveelopers 
+- linux is open source 
+
+linux uses:
+
+- super computers, smart phones, desktop
+- web servers, laptops 
+- washing machine, dv dplayers 
+- routers, modems
+- cars, refridgerators 
+- aeroplanes, rockets 
+
+
+unix vs linux:
+
+- are both different..?
+- both are different but linux is derived from unix 
+- linux kernel is written from scratch by linus, not even a single is copied 
+- linux is just an kernel , but unix is complete os 
+- linux is packaged in distributions to make it os 
+- linux: c prog, rust etc unix : c, assembly 
+- linux : opensource , unix: closed source and mixed 
+- linux: monolithic , unix: hybrid, micro kernel structures 
+- linux: debian, ubuntu, fedora, redhat, android, unix: ibm aix, solaris, macos 
+- linux : patches are quick , unix : slow 
+- linux : mostly free , unix : mostly paid 
+
+
+linux distros:
+
+- other os like microsoft combine each bit of code internally and release like single package 
+- windows 7, 8.1, 10, 11, vista 
+- 
+

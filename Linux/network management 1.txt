@@ -1,0 +1,80 @@
+
+
+- session management
+
+----------------------------------------------------------------------------------
+
+Kill Signals:
+	- way of communicating a message from one process to another is called a signal 
+	- kill signal not only kills the process but also pause, resume, terminate, suspend etc 
+	
+	Eg: kill -signal -pid 
+	
+	Eg: kill -2 pid, kill -sigint pid 
+			ctrl+c
+		kill -3 pid, kill -sigquit pid
+			ctrl+d
+		kill -9 pid, kill -sigkill pid 
+		kill -15 pid, kill -sigterm pid 
+		kill -17,19,23 pid, kill -sigstop pid 
+		
+		
+		
+Network Management:
+
+using ifconfig:
+	- used to display available network adapter config details 
+	Eg: ifconfig 
+	
+using hostname:
+	- used to display hostname of the linux os in the network 
+	Eg: hostname 
+		hostname -i 
+		
+using host command:
+	- used to DNS lookup activity 
+	Eg: host google.com 
+		host facebook.com 
+		
+using netstat command:
+	- used to display network stats 
+	Eg: netstat -l : listening ports info 
+		netstat -t : tcp connections 
+		
+		
+iso - osi model:
+
+- 7 layers 
+
+- application 
+	- fb, google, http, smtp, ftp 
+- presentation 
+	- extensions 
+- session 
+	- 
+- transport 
+	- port, tcp, udp, quic 
+- network 
+	- Ip address 
+- datalink 
+	- MAC Address, frames 
+- physical
+	- wire, rj45, optical fibre 
+	
+	
+	
+- laptop 
+	- chrome 
+		- youtube 
+			- 6754
+		- insta
+			- 9989
+		- job apply 
+			- 65531
+	- zoom 
+		- 10876
+		
+- 65535 no of ports 
+- 1000 ports fixed for common protocols and services 
+- 22 ssh, 53 dns, 80 http, 453 tcp, ftp 21, etc 
+	

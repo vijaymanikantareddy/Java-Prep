@@ -1,0 +1,36 @@
+
+
+
+functionalities:
+	- memory management 
+		- ram, rom, virtual memory 
+			- utilizing rom as ram 
+				- security, ram expand, memory fragmentation problem 
+	- process management 
+		- pcb 
+			- process control block 
+				- ds : double linked list 
+				- pointer, process state, process number, program counter, register, memory limits, list of open files 
+	- device management 
+	- file management 
+	- security 
+	- control over system performnac expand
+	- jobs and scheduling 
+	- error detects 
+	- execute software 
+	
+	
+History:
+
+- computers are as big as rooms 
+- very difficult to operate 
+- every computer has different os 
+- every software designed is specific and works only on single os 
+- difficult to operate and expensive 
+
+
+linux history:
+- linux is an free ditributional verion of unix 
+- unix is inspired by multics os 
+	- multi user, multi process, hierarical file structure, dynamic linking 
+- unix first version in 1970 in assembly 

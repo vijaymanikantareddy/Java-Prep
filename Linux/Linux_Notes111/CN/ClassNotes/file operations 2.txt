@@ -1,0 +1,115 @@
+
+
+TCP Handshaking:
+- check server is alive or not 
+- 3 way handshaking 
+- client sends 'syn' msg to server 
+- server syn, ack to client 
+- client sends ack to server 
+
+------------------------------------------------------
+
+
+removing folder:
+
+using rmdir command:
+- remove directory 
+- used to remove empty directories 
+- if folder contains data it will throw error 
+- we cam remove multiple folders at a time 
+- we can also remove folders with hierarchy 
+
+	Eg: rmdir folder 
+		rmdir 1 2 3
+		rmdir a/b = remove folder b if it is empty otherwise thros error 
+		rmdir -p a/b = remove folder b id b is empty and then remove folder a 
+		
+		
+
+using rm command:
+- remove 
+- used to remove folders with content 
+- used to remove files 
+- remove multiples files, folders using rm command 
+
+	Eg: rm file 
+		rm file1 file2 file3 
+		
+		rm -r folder 
+		rm -rf folder 
+		
+		
+		
+copying/moving files :
+
+
+using mv command:
+- move 
+- used to move contents of a file/folder to another file/folder 
+- data will be erased at source and will be only available at destination 
+- used for renaming purpose too
+
+
+	Eg: mv file1 file2
+		mv folder1 folder2 
+		
+		
+using cp command:
+- copy 
+- used to copy contents from one file to another 
+
+	Eg: cp file1 file2 
+	
+	
+	
+viewing files:
+
+using cat command:
+- concatenation 
+- serves multiple things 
+- view data inside a file 
+- add multiple files 
+- create a new file with data 
+
+	Eg: cat filename 
+		cat file1 file2 
+		cat > cat.txt 
+		
+		
+using head command:
+- used to view content of a small/medium files 
+- it display by default top 10 lines of a file 
+- we can also specify the number of lines to be ddisplayed 
+
+	Eg: head file 
+		head -n 5 abc 
+		head -n 19 abc 
+		
+		
+using tail command:
+- small/medium files 
+- display bottom 10 lines 
+- we can specify 
+
+	Eg: tail abc 
+		tail -n 5 abc 
+		
+		
+using more command:
+- used to display content of large/very large files 
+- in form of pages 
+- more command loads the entire file into memory
+- press space or enter to traverse  
+
+	Eg: more abc 
+	
+	
+using less command:
+- large/ very large 
+- pages 
+- less command only loads the part into memory that is displayed 
+- we do have search capability 
+
+	Eg: less abc 
+	
+	

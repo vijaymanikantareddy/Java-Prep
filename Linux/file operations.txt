@@ -1,0 +1,75 @@
+
+
+Docker telskoni randi:
+https://chatgpt.com/share/6821ecc0-4804-800f-954b-677da8892930
+
+n8n masterclass:
+https://www.youtube.com/watch?v=AURnISajubk&t=1849s
+
+
+--------------------------------------------------------------------------------
+
+
+- using rm command:
+	- remove 
+	- used to delete files 
+	- it also delete folders with data 
+	- remove multiple files, folders in a single go 
+	
+	Eg: rm filename 
+		rm -r foldername 
+		
+		
+- using mv command:
+	- move 
+	- used to move file, folder from source to destination 
+	- file will be deleted at source and present at destination 
+	- mv is also used to rename file, folder 
+	Eg: mv filename source destination 
+	
+	
+- using cp command:
+	- copy 
+	- used to copy data from file to file 
+	Eg: cp filename src dest 
+	
+	
+- 5 files 
+	- file1, file2, file3, file4, file5 
+	- file6
+	Eg: cat file1 file2 file3 file4 file5 > file6 
+	
+	cat ./Downloads/file3 file4 > file6 
+	
+	
+view files:
+
+- using cat command:
+	- concatenate 
+	- used to add multiple files 
+	- view content of a file 
+	- combined with > to create new files 
+	
+	Eg: cat filename 
+		cat file1 file2 
+		cat > file3 
+		
+		
+- using head command:
+	- used to view contents of a medium size file 
+	- used to display head part of a file 
+	- by default it display top 10 lines of a file 
+	- arbitary number of lines can also be displayed using -n option 
+	
+	Eg: head filename 
+		head -n 5 filename 
+		
+		
+- using tail command:
+	- used to view contents of a medium size file 
+	- used to display bottom part of a file 
+	- by default it display bottom 10 lines of a file 
+	- arbitary number of lines can also be displayed using -n option 
+	
+	Eg: tail filename 
+		tail -n 5 filename 

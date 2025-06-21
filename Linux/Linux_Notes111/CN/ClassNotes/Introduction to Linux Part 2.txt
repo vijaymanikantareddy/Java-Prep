@@ -1,0 +1,56 @@
+
+
+Linux Histroy:
+
+- linux is a free distributional version of unix 
+- unix is inspirted by multics os (multi-user, multi-process, dynamic linking, hierarical file system)
+- unix first version released in 1970 (assembly)
+- later in 1972 C lang was developed by DR
+- Unix is rewritten in C 
+- Unix gains popularity because of its portablity, networking, availability 
+- linus trovald a finnish student started projrct LINUX 
+- first version was released in 1991
+- he made linux as open source 
+- torvald only written kernel part of linux 
+
+ 
+Linux vs Unix:
+
+- is both same..?
+- linux and unix are different 
+- linux is derived from unix 
+- linux code was completely written from scratch not even a single line of code copied from unix 
+- linux is not an complete OS it's only kernel but Unix is a complete OS 
+- linux is packed into ditros to make it as an OS 
+- linux is an open course , unix : closed source
+- linux : C lang, other prog lang , Unix: C, assembly
+- linux : opensource, unix: mixed (open, closed)
+- linux : monolithic , unix : monolithic, micro, hybrid 
+- linux: debian, ubuntu, fedora, redhat, android , unix : ibm aix, solaris, darwin, macos 
+- linux : patches are quick , unix : slow
+- linux : mostly free but some paid versions are also available (redhat), unix : mostly paid but free 
+versions are also available (freeBSD,solaris)
+
+
+Distributions:
+- other OS liks microsoft, macos combine each bit vof code internally and release asa  single package (windows 10,11,7,8.1)
+- but linux is only a kernel 
+- different parts of linux are developed by different organisations
+- distro combine those parts to name an OS 
+- Ubuntu, Linux Mint, Debian, Fedora, Redhat, Arch Linux 
+
+Where linux is used:
+
+- smart phones, super computers , desktop
+- web servers, tablets, laptops 
+- washing machines, dvd players , refrigerators 
+- routers, modems 
+- cars, airplanes 
+- rockets 
+
+
+
+
+
+
+

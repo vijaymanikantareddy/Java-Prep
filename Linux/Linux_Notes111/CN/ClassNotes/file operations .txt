@@ -1,0 +1,83 @@
+
+
+URL
+- Uniform Resource Locator 
+- used to identify a resource in the internet 
+- text, audio, video, .c ,.html, .css, etc 
+
+
+ EG: http://credentials:subdomain.domain.com:port/path/to/resource?query=key#fragment 
+ 
+ DNS:
+ https://howdns.works/
+ 
+ --------------------------------------------------------------------------------------------------
+ 
+SSH:
+- secure shell 
+- used to remotely connect and control a system 
+- both systems should be in the same network 
+
+	Eg: service ssh status 
+		service ssh start 
+		service ssh stop 
+		service ssh restart 
+		
+		ssh user@server 
+		
+		
+Modifying files and folders:
+
+creating a file:
+
+using touch command:
+- light weight command 
+- if the file we are trying to create already exist touch will change it's modified time 
+
+	Eg: touch file_name 
+	
+
+using redirtection operator (>):
+
+file0 - input file 
+file1 - output file 
+file2 - error file 
+
+command:
+
+terminal --> command (keyboard) --> file0 --> shell prog --> path varia --> execute --> file 1 --> monitor 
+
+- redirection operator (>) redirects o/p of a command from standard file (file 1) to any arbitary file 
+
+
+using cat command:
+- cat along with redirection operator 
+- we can add data into the file during creation 
+- press ctrl+d to come out of cat prompt 
+
+	Eg: cat > cat.txt 
+	
+	
+using echo command:
+- echo with > 
+
+	Eg: echo "Hello world" > hello.txt 
+	
+	
+using vi/vim editor: 
+
+
+
+creating a folder:
+
+using mkdir command:
+- make directory 
+- used to create a new folder 
+- can create multiple folders at a time 
+- folders with hierarchy 
+
+	Eg: mkdir folder 
+		mkdir 1 2 3 
+		mkdir a/b = create folder b inside folder a if folder a is present otherwise display error 
+		mkdir -p a/b 
+			create folder b inside folder a if a is present otherwise it will first create a then b inside a 

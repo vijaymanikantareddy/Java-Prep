@@ -1,0 +1,78 @@
+
+
+client (browser) do not trust websites by default 
+certmgr.msc
+
+--------------------------------------------------------
+
+
+Introductory terms in linux:
+
+- binaries: executables in windows , all commands are binaries 
+- Case sensitive: linux is case sensitive 
+- directory : folder in windows 
+- home : one of linux directory where user data is stored 
+- root user : administrator in windows 
+- script : series of commands which gets executed in interpreter env 
+- shell : program that acts as an interface b/w the user and OS 
+- terminal : CLI 
+
+
+Linux File System:
+
+- in linux everything is a file 
+- linux do not contain physical hard drive like windows 
+- linux has a logical hierarical file structure 
+
+
+
+vmware 
+kali image 
+
+
+run different os in a single computer 
+
+1. dual boot 
+2. virtual machine 
+
+
+
+
+Guest OS (kali Linux )
+-----------------------------
+virtual machine software (vmware)
+------------------------
+Host OS (windows)
+-------------------------
+computer hardware
+
+
+
+
+
+commands:
+
+
+
+pwd:
+- present working directory 
+- display the folder that we are currently working in 
+
+	Eg: pwd 
+
+
+whoami:
+- display the username of current user logged in 
+
+
+
+
+
+
+
+
+
+
+
+
+

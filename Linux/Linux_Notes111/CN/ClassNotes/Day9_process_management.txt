@@ -1,0 +1,164 @@
+
+
+Kohli -> msg (plain text) -> Encryption (key) -> Ciphertext -> Internet -> Destination 
+DEcryption (key) -> msg (plain text) -> Dhoni
+
+
+
+Symmetric or private key cryptography:
+
+- we are going to use same key in both encryption and decryption 
+- very fast 
+- key exachanging is the problem 
+- AES, DES, Caesar cipher, block ciphers 
+
+
+Kohli -> msg (plain text) -> Encryption (key) -> Ciphertext -> Internet -> Destination 
+DEcryption (key) -> msg (plain text) -> Dhoni 
+
+https://www.devglan.com/online-tools/aes-encryption-decryption
+
+Asymmetric or public key cryptography:
+
+- two different keys for both encryption and decryption
+- public key, private key 
+- both public and private keys are mathematically dependent 
+- Public keys are accessed by everyone whereas private keys are kept secret 
+- some what slow 
+- RSA, ECC 
+
+
+Kohli (kpub key, kpriv key)
+Dhoni (Dpub key, Dpriv key)
+
+Kohli -> msg (plain text) -> Encryption (Dpub key) -> Ciphertext -> Internet -> Destination
+DEcryption (Dpriv key) -> msg (plaintext) -> Dhoni
+
+https://www.devglan.com/online-tools/rsa-encryption-decryption
+
+Real time scenario:
+
+- going to use asymmetric key cryptography for key exchange 
+- communication using symmetric key cryptography
+
+------------------------------------------------------------------------------------------------------------
+
+
+- every process contains PCB 
+- data structure that contains 
+	process state (new, ready, running, suspend, wait, terminate),PID, Program counter, Registers,
+	List of open files, CPU scheduling, memory managemnt, I/O status  and more 
+	
+- Process table (pid, pcb address)
+
+
+Types of processes:
+
+Parent process:
+- parent which creates another process 
+- all processes have a parent process 
+
+child process:
+- process created by another process 
+
+orphan process:
+- if parent process completes its execution even before child process execution 
+- child process is called orphan process 
+- "init" pid 0 will be the new parent process for orphan process 
+
+Zombie process:
+- if a process completes it's execution but shows up in process status 
+- it is called zombie process 
+
+Daemon Process:
+- system -related processes that run in background 
+
+
+
+commands:
+
+
+ps :
+- process status (display current processes info )
+
+ps -e :
+- display daemon processes 
+
+ps -f :
+- display process info with full options 
+
+ps aux :
+- display all processes running in the linux OS 
+
+jobs:
+- display jobs that are running or suspended in background 
+
+
+Creating a Background process:
+
+- command (enter) = foreground process 
+- command & (enter) = background process 
+
+- in order to bring background process to foreground 
+	Eg: fg % PID 
+	
+	
+top:
+- display real time dynamic view of running processes 
+- press "q" to quit from top prompt 
+
+	Eg: top 
+
+
+PID : process id 
+PR : process priority (value lower, high priority)
+NI : nice value (value negtive, high priority)
+VIRT : virtual memory used by the process 
+USER : user who created the process 
+%CPU : display cpu consumed 
+SHR : shared memory 
+RES : ram consumed 
+%MEM : memory consumed 
+Command : which command created the process 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

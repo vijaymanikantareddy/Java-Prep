@@ -1,0 +1,74 @@
+
+
+- command line arguments in programming 
+
+
+
+
+what exactly happens when we browse an webiste..?
+
+- user types fav domain name in the browser - URL 
+- dns 
+- tcp/ip handshaking 
+- tls handshaking 
+- http protocol 
+
+---------------------------------------------------------------------------------------------------
+
+
+linux commands:
+
+- using pwd command:
+	- present working directory 
+	Eg: pwd 
+	
+- using whoami command:
+	- display which user currently logged in 
+	Eg: whoami 
+	
+- using cd command:
+	- change directory 
+	- used to traverse between the folders 
+	Eg: cd / 
+		cd /bin
+		cd /home/kali/downloads 
+		cd . - current folder  
+		cd .. - parent folder 
+		cd ../..
+		cd ../../../../../../../../..
+		
+		
+- shortcut to open terminal is ctrl+alt+t 
+
+
+- using ls command:
+	- listing directories 
+	- display content of a folder/directory 
+	Eg: ls 
+		ls -l 
+		ls -a 
+		ls -al 
+		
+- using dir command:
+	- listing directories 
+	- display content of a folder/directory 
+	Eg: dir 
+		dir -F 
+		
+		
+		
+
+- 2 files 
+	- vmware 
+	- kali linux os 
+	
+	
+
+- guest os : kali linux 
+- virtualisation software : vmware
+- host os : windows
+- computer hardware 
+	
+
+
+

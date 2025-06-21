@@ -1,0 +1,24 @@
+
+
+icmp packets 
+	- ping 
+	- it shares the info about router that is failed to source 
+
+
+ethtool
+	- used to dislay information about network interface 
+	- network interface capacity, limitations ni display chestundi 
+	Eg: ethtool eth0 
+	
+	
+nslookup
+	- used to display dns info 
+	- dns lookup 
+	Eg: nslookup www.google.com 
+		nslookup 172.164.23.40
+		
+		
+cURL
+	- used to access websited through cld 
+	Eg: curl facebook.com 
+	

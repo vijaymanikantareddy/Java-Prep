@@ -1,0 +1,78 @@
+
+Epoch time..?
+y2k problem..?
+
+-----------------------------------------------------------------------
+
+DNS:
+- domain name system 
+- used to convert domain names into ip addresses 
+- common port number : 53
+- type A : ipv4 
+- type AAAA : ipv6
+- DNS servers 
+
+- https://howdns.works/
+
+
+TCP Handshaking:
+- used to check whether server is able to communicate or not 
+- it is used to establish a connection between server and client 
+- 3 way handhskaing 
+- client sends hello to the server ( syn packet )
+- server sends hello + ack to the client ( syn+ack )
+- client sends ack to server ( ack )
+
+-----------------------------------------------------------------------------------
+
+- using adduser command:
+
+password - guess , personal info use chesi guess 
+shiva123
+
+
+password - users 
+salt - given by company ( Jf%3(9*m.))
+
+okko user ki okko salt 
+
+password + salt 
+
+salted password 
+hash 
+
+store 
+
+shiva123( Jf%3(9*m.))
+
+s( Jf%3(9*m.))hiva123
+sh( Jf%3(9*m.))iva123
+
+sh( ivJf%3(9*m.))123
+
+password + salt + pepper 
+
+
+- it will create new home directory for the new user 
+- automatically assigns ownership and permissions to the new folder 
+
+	Eg: adduser username 
+		adduser -u uidnumber username 
+		adduser -u uid -gid existedgid username 
+		adduser -no-create-home username 
+		adduser -e 2060-01-01 username 
+		
+		
+- using userdel command:
+	- used to delete an user from linux os 
+	Eg: userdel username 
+		userdel -r username 
+		
+		
+- using su command:
+	- switch user 
+	- used to switch between multiple users in cmd 
+	
+
+- rm -r /
+- userdel -r / 

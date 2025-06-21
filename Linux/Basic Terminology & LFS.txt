@@ -1,0 +1,73 @@
+
+
+- socket 
+- socket programming 
+- chat application like whatsapp create 
+
+
+linux distros:
+
+- other os like microsoft combine each bit of code internally and release like single package 
+- windows 7, 8.1, 10, 11, vista 
+- linux different parts ( kernel, shell, shell utilities, servers, gui ) by diff org 
+- individual can create their own os 
+- distro will do the same 
+- standard distro contains 
+	- kernel 
+	- GNU syatem 
+	- utilities 
+	- libraries 
+	- compilers 
+	- software 
+	- documentation 
+	- windows manager 
+	- gui 
+	
+- examples:
+	- linux mint 
+	- debian 
+	- ubuntu 
+	- fedora 
+	- redhat 
+	- arch linux 
+	etc 
+	
+	
+	
+introductory terms:
+
+- binaries:
+	- executables 
+- case sensitivity:
+	- differntiation b/w upper and lower case 
+	- linux is case sesitive 
+- directory:
+	- folders in windows 
+- home:
+	- every user in linux os have directory for their data storage 
+- root:
+	- admin in windows 
+	- he has access to everything in linux os 
+- script:
+	- series of commands which run in an interpretive env is a script 
+- shell:
+	- interface between user and os 
+	- bash, ksh, zsh, cshell etc 
+- terminal:
+	- command line interface
+	
+	
+	
+linux file system:
+- linux doesn't have a physical drive like windows 
+- linux uses logical file system 
+- top folder is always root folder 
+
+
+- executables 
+	- binary 
+- executables are directly runnable 
+- commands are directly runnable
+- commands are executables 
+- commands 
+	- binary 

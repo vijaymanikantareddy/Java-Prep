@@ -1,0 +1,73 @@
+
+
+URL:
+	- uniform resource locator 
+	- used to locate/identify resources in the internet 
+	- text, image, video, html, css, js, python, php, java etc
+
+	Eg: https://subdomain.domain.com:8080/path/to/resources?key=value#fragment 
+	
+		https: protocol 
+		domain: 
+		sub domain: 
+		.com: tld
+		8080 : port 
+		/path/to/resoiurces : file location in server 
+		key=value  : to search specific data 
+		#fragment : to go to hero section directly 
+		
+		
+----------------------------------------------------------------------------------
+
+
+creating files:
+
+- using vi/vim editor:
+	- ii is same as notepad in windows 
+	- used to create file, update data in the file 
+	
+	Eg: vim filename
+		press i to enter insert mode 
+		we have to enter data into the file 
+		press esc to come out of insert mode 
+		press :wq to save and exit 
+		
+		
+- using nano editor:
+	- somewhat easy to use 
+	
+	Eg: nano filename
+		we have to enter data 
+		press ctrl+X 
+		press yes 
+		press enter to come out of nano prompt 
+	
+	
+Creating Folders:
+
+- using mkdir command:
+	- make directory
+	- used to create folders 
+	- we can create multiple folders at a time 
+	- we can also create folders with hierarchy 
+	
+	Eg: mkdir foldername 
+		mkdir f1 f2 f3 f4
+		mkdir a/b - it will create folder b inside folder a if folder a is present otherwise error 
+		mkdir -p c/d - it will create folder d insider folder c if folder c is present 
+			otherwisw it will create folder c first then d inside it 
+			
+			
+- using rmdir command:
+	- remove directory
+	- used to delete folders 
+	- it can only remove empty folders 
+	- folders with data cannot be removed using this command 
+	- we can remove multiple folders at a time 
+	- we can also remove folders with hierarchy 
+	
+	Eg: rmdir foldername 
+		rmdir f1 f2 f3 f4
+		rmdir a/b - it will remove folder b inside folder a if folder b is empty otherwise error 
+		rmdir -p c/d - it will remove folder d insider folder c if folder c is empty, it will
+		also remove folder c if folder c is empty

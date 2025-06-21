@@ -1,0 +1,136 @@
+
+
+Domains in Cybersecurity:
+	- Communications 
+	- Data Integrity 
+	
+- Communications
+	- symmetric key cryptography or private key cryptography
+	- assymetric key cryptography or public key cryptography
+	
+dhoni -> virat 
+
+dhoni -> msg -> encryption (key) -> cipher text -> internet -> destination 
+-> decryption(key) -> plain text -> kohli
+	
+	
+- symmetric key cryptography or private key cryptography
+	- we will use same key in both encryption and decryption 
+	- very fast 
+	- block cipher, aes, des etc 
+	- key sharing between source and destination is problem 
+
+dhoni -> msg -> encryption (key1) -> cipher text -> internet -> destination 
+-> decryption(key1) -> plain text -> kohli
+
+
+- asymmetric key cryptography or public key cryptography
+	- we will use different keys in encryption and decryption 
+	- slow 
+	- rsa, diffie hellman, elliptical curve cryptography.. etc 
+	
+	dhoni - d.pub : access to dhoni and kohli and world 
+			d.pri : only access to dhoni
+			
+	virat - v.pub : access to dhoni and kohli and world 
+			v.pri : only access to virat
+			
+
+dhoni -> virat 
+
+dhoni -> msg -> encryption (v.pub) -> cipher text -> internet -> destination 
+-> decryption(v.pri) -> plain text -> kohli
+
+
+real time:
+
+- real world will use both symmetric and assymetric key cryptography
+- first they use assymetric key cryptography to send symmetric key to destination 
+- after they will continue in symmetric key cryptography
+
+
+
+modulo operator:
+	
+23%2 = 1
+22%2 = 0
+299%2 = 1
+1000002%2 = 0
+1987654326789087234567898765425354%2 = 0
+
+
+24%12 = 0
+22%12 = 10
+657%12 = 9
+89765678765%12 = 5
+1000000000000%12 = 4
+
+a = 10000000000
+b = 12 
+c = rem 
+
+i know b,c 
+
+-----------------------------------------------------------------------------
+
+youtube 
+
+1 day : 2.6 million or 26 lakh videos 
+1 min : 2500 videos 
+
+2005 youtube 
+
+https://www.youtube.com/watch?v=uot68DXCX-w
+
+uot68DXCX-w gives uniqueness 
+
+
+11 digits 
+
+youtube will be using 64 encode method 
+ 
+64:
+	a-z
+	A-z
+	0-9
+	-_
+	
+	
+1 placeholder : 64 characters 
+
+
+total possible combinations: 64 ^ 11 
+	- 73786976294838206464
+	- Seventy-three quintillion, 
+	seven hundred eighty-six quadrillion, 
+	nine hundred seventy-six trillion, 
+	two hundred ninety-four billion, 
+	eight hundred thirty-eight million, 
+	two hundred six thousand, 
+	four hundred sixty-four.
+	
+	
+- hashing 
+- dsa 
+	
+------------------------------------------------------------------------
+
+MCP protocol - anthrophic 
+A2A protocol - Google 
+
+
+
+completely coding 
+no coding : n8n  
+
+
+
+
+
+
+
+
+
+
+
+
