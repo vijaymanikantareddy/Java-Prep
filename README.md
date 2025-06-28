@@ -990,8 +990,6 @@ num = 30
 
 ## 2. break Statement 🚫
 
-### Description
-
 Terminates the innermost loop or switch.
 
 ### Syntax
@@ -1051,8 +1049,6 @@ public class BreakWhileExample {
 ```
 
 ## 3. continue Statement ⏭️
-
-### Description
 
 Skips the current iteration.
 
@@ -1122,8 +1118,6 @@ public class ContinueWhileExample {
 
 ## 5. Using Labels with break and continue 🏷️
 
-### Description
-
 Labels control outer loops in nested structures.
 
 ### Example: break with Label
@@ -1191,8 +1185,6 @@ Type casting converts a variable from one data type to another.
 
 ## 2. Implicit Type Casting (Widening) 📈
 
-### Description
-
 - Automatic, no data loss.
 - Order: `byte -> short -> int -> long -> float -> double`
 
@@ -1241,8 +1233,6 @@ Double value after casting: 25.0
 ```
 
 ## 3. Explicit Type Casting (Narrowing) 📉
-
-### Description
 
 - Manual, may cause data loss.
 - Order: `double -> float -> long -> int -> short -> byte`
@@ -1294,8 +1284,6 @@ Byte value after casting: -126 (Data Loss)
 ```
 
 ## 4. Data Loss During Casting ⚠️
-
-### Description
 
 Larger types cast to smaller types may lose data.
 
