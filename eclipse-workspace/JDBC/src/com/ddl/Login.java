@@ -24,7 +24,7 @@ public class Login {
 //		String query = "Select * from users where username='" + username + "' and password='" + password + "'";
 //
 //		ResultSet resultSet = statement.executeQuery(query);
-//		if (resultSet.next()) {
+//		if (resultSet.next()) { 
 //			System.out.println("Login Successful!!!");
 //		} else {
 //			System.out.println("Invalid Credentials");
