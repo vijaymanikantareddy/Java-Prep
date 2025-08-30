@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MusicPlayer {
-	public int id = 1;
 	List<Song> allSongs;
 	List<Playlist> playlists;
 
@@ -62,7 +61,7 @@ public class MusicPlayer {
 	}
 
 	public void createPlaylist(String title) {
-		Playlist newPlaylist = new Playlist(id++, title);
+		Playlist newPlaylist = new Playlist(Main.playlistId++, title);
 		playlists.add(newPlaylist);
 		System.out.println("Playlist created successfully");
 	}

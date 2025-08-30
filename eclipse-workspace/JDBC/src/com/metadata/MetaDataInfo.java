@@ -17,8 +17,21 @@ public class MetaDataInfo {
 		PreparedStatement statement = connection.prepareStatement(query);
 
 		ResultSet resultSet = statement.executeQuery();
+
 		ResultSetMetaData metaData = resultSet.getMetaData();
-		
-		System.out.println("Column count: "+metaData.getColumnCount() );
+
+		System.out.println(metaData.getTableName(1));
+
+		System.out.println("Column count: " + metaData.getColumnCount());
+		int count = metaData.getColumnCount();
+		for (int i = 1; i <= count; i++) {
+			System.out.print(metaData.getColumnName(i));
+			System.out.print("\t");
+		}
+
+		while (resultSet.next()) {
+			System.out.println(resultSet.getInt(1) + "\t" + resultSet.getString(2));
+		}
+
 	}
 }
