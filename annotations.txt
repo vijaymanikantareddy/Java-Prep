@@ -1,0 +1,8 @@
+autowire -> @Autowired
+bean -> @Component
+placeholder -> @Value
+beans.xml -> @Configuration
+component scan -> @ComponentScan(basePackage = "com")
+
+
+Component -> scanned
