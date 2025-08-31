@@ -7,10 +7,11 @@
     <bean id="st" class="com.Student">
         <property name="studentid" value="1"></property>
         <property name="name" value="Vijay"></property>
+        <property name="address" ref="address"></property>
     </bean>
-    <bean id="st2" class="com.Student">
-        <constructor-arg value="2"> </constructor-arg>
-        <constructor-arg value="FLM"> </constructor-arg>
+    <bean class="com.Address" id="address">
+        <property name="addrId" value="100"></property>
+        <property name="street" value="Hi-Tech City"></property>
     </bean>
     <bean id="emp" class="com.Employee">
         <property name="empId" value = "1"></property>
@@ -20,15 +21,15 @@
                 <value> SQL </value>
                 <value> JDBC </value>
                 <value> Hibernate </value>
-                 <value> Hibernate </value>
+                <value> Hibernate </value>
             </set>
         </property>
-        
         <property name="hobbies">
-        <map>
-        <entry key="1" value="cricket"></entry>
-         <entry key="2" value="badminton"></entry>
-          <entry key="2" value="jogging"></entry>
-        </map></property>
+            <map>
+                <entry key="1" value="cricket"></entry>
+                <entry key="2" value="badminton"></entry>
+                <entry key="2" value="jogging"></entry>
+            </map>
+        </property>
     </bean>
 </beans>

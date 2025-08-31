@@ -24,8 +24,8 @@ public class Test {
 		Student student = container.getBean("st", Student.class);
 		System.out.println(student);
 		
-		Student student2 = container.getBean("st2", Student.class);
-		System.out.println(student2);
-		System.out.println(student == student2);
+//		Student student2 = container.getBean("st2", Student.class);
+//		System.out.println(student2);
+//		System.out.println(student == student2);
 	}
 }
