@@ -3,31 +3,25 @@ package com;
 public class Student {
 	private int studentid;
 	private String name;
-	private Address address;
+	private Address addr;
 
-	public Student(int studentid, String name, Address address) {
+	public Student(int studentid, String name, Address addr) {
 		super();
 		this.studentid = studentid;
 		this.name = name;
-		this.address = address;
+		this.addr = addr;
 	}
 
-	public Address getAddress() {
-		return address;
+	public Address getAddr() {
+		return addr;
 	}
 
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setAddr(Address addr) {
+		this.addr = addr;
 	}
 
 	public Student() {
 
-	}
-
-	public Student(int studentid, String name) {
-		super();
-		this.studentid = studentid;
-		this.name = name;
 	}
 
 	public int getStudentid() {
@@ -48,7 +42,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [studentid=" + studentid + ", name=" + name + ", address=" + address + "]";
+		return "Student [studentid=" + studentid + ", name=" + name + ", address=" + addr + "]";
 	}
 
 }

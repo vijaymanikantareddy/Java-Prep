@@ -17,12 +17,12 @@ public class Test {
 
 	private static void employeeDetails(ApplicationContext container) {
 		Employee emp = container.getBean("emp", Employee.class);
-		System.out.println(emp.getHobbies());
+//		System.out.println(emp.getHobbies());
 	}
 
 	private static void studentDetails(ApplicationContext container) {
 		Student student = container.getBean("st", Student.class);
-		System.out.println(student);
+		System.out.println(student.getAddr());
 		
 //		Student student2 = container.getBean("st2", Student.class);
 //		System.out.println(student2);

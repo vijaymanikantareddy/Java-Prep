@@ -4,13 +4,21 @@
     xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-    <bean id="st" class="com.Student" autowire="byType">
-        <property name="studentid" value="1"></property>
-        <property name="name" value="Vijay"></property>
+    
+    <bean id="st" class="com.Student" autowire="constructor">
+        <constructor-arg index="0" value="1"></constructor-arg>
+        <constructor-arg index="1" value="Vijay"></constructor-arg>
     </bean>
-    <bean class="com.Address" id="address">
+    
+    <!-- bean class="com.Address" id="address">
         <property name="addrId" value="100"></property>
         <property name="street" value="Hi-Tech City"></property>
+    </bean !-->
+    
+    
+    <bean class="com.Address" id="addr">
+        <property name="addrId" value="101"></property>
+        <property name="street" value="Gachibowli"></property>
     </bean>
     <bean id="emp" class="com.Employee">
         <property name="empId" value = "1"></property>
