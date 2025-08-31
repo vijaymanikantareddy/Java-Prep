@@ -1,0 +1,52 @@
+SingleTon Class
+
+A Singleton class is a class that allows only one object (instance) of itself to be created during the entire runtime of the application.
+
+👉 In other words:
+
+You cannot create multiple instances using new.
+
+You get the same object every time you access it.
+
+It’s used when you need one shared resource throughout the application (e.g., logging, configuration, DB connection pool manager).
+
+
+package com;
+
+public class Employee {
+    private static Employee emp; // Step 1: a static reference to the single instance
+
+    private Employee() {         // Step 2: private constructor (cannot use new outside this class)
+
+    }
+
+    public static Employee getEmployee() {   // Step 3: static method to provide the object
+        if(emp == null)                      // if no object is created yet
+            emp = new Employee();            // create the first object
+        return emp;                          // return the same object for all future calls
+    }
+}
+
+
+How it works:
+
+private static Employee emp;
+→ Stores the single object of this class. static means it belongs to the class, not objects.
+
+private Employee()
+→ Constructor is private. So, no one can call new Employee() outside this class.
+
+public static Employee getEmployee()
+→ This is the global access point.
+→ On the first call, it creates the object (emp = new Employee()).
+→ On later calls, it returns the same object.
+
+
+Key Points:::
+
+Ensures only one instance of the class exists.
+
+Provides a global point of access (getEmployee()).
+
+Used in: Database connections, Logger, Caches, Thread pools, Config managers.
+
