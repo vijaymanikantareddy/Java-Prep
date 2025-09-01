@@ -53,3 +53,11 @@ BEAN LIFE CYCLE:
 4. init ( @PostConstruct )
 5. normal methods
 6. destroy (@PreDestroy)
+
+
+Scope of Beans:
+    1. Singleton
+    2. Prototype
+    3. Request
+    4. Session
+    5. application

@@ -5,6 +5,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
     
+    
+    <bean id="user" class="com.User" scope="prototype"></bean>
+    
     <bean id="st" class="com.Student" autowire="constructor">
         <constructor-arg index="0" value="1"></constructor-arg>
         <constructor-arg index="1" value="Vijay"></constructor-arg>
