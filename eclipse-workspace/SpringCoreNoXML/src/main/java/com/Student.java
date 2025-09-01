@@ -4,16 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import jakarta.annotation.PostConstruct;
+
 @Component("student")
 public class Student {
-	
+
 	@Value("${id}")
 	private int studentid;
-	
+
 	@Value("${name}")
 	private String name;
-	
-	
+
 	private Address addr;
 
 	public Student(int studentid, String name, Address addr) {
@@ -26,7 +27,7 @@ public class Student {
 	public Address getAddr() {
 		return addr;
 	}
-	
+
 	@Autowired
 	public void setAddr(Address addr) {
 		this.addr = addr;
@@ -55,6 +56,11 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [studentid=" + studentid + ", name=" + name + ", address=" + addr + "]";
+	}
+
+	@PostConstruct
+	public void init() {
+		System.out.println("PostConstruct Called ");
 	}
 
 }

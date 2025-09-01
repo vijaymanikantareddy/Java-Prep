@@ -9,6 +9,8 @@ public class Test {
 		Student student = container.getBean("student", Student.class);
 		System.out.println(student);
 		System.out.println(student.getAddr());
-
+		
+		SimTest simTest = container.getBean("simTest", SimTest.class);
+		simTest.callSim();
 	}
 }

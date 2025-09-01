@@ -6,3 +6,50 @@ component scan -> @ComponentScan(basePackage = "com")
 
 
 Component -> scanned
+
+autowiring:
+byType -> by using Class Name
+byName -> field name and bead id name should match
+constructor -> it expects a param constructor
+
+@Autowired
+    field
+    setter
+    constructor
+
+    Employee constructor
+    address bean @Autowired
+
+    Employee bean -> empty bean
+    null
+
+
+@Component
+
+@Value("${server.port}")
+@PropertySource("")
+
+@ComponentScan -> config class 
+@Configuration 
+
+
+@Configuration
+@ComponentScan(basePackages = "com")
+@PropertySource("classpath:application.properties")
+public class Config {
+
+}
+
+
+@Qualifier
+@Primary
+
+
+
+BEAN LIFE CYCLE:
+1. Container is started
+2. Beans are initialised
+3. Dependencies Injected
+4. init ( @PostConstruct )
+5. normal methods
+6. destroy (@PreDestroy)
