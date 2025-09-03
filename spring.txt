@@ -61,3 +61,31 @@ Scope of Beans:
     3. Request
     4. Session
     5. application
+
+
+Steps in JDBC:
+1. Register JDBC
+2. Create Connection
+3. Create Statement
+4. Prepare Query
+5. Execute Query
+6. Close Connection
+
+
+Spring JDBC: 
+It creates connection.
+It creates Statement
+It Execute
+It will close connection automatically
+It handles checked exception and converts it into unchecked exception.
+
+* SpringJDBC provides JdbcTemplate -> bean 
+    DataSource -> url username password.
+    DriverManagerDataSource
+We have to create the bean for JdbcTemplate.
+@Component 
+@Bean 
+
+when the class is our custom -> @Component 
+when the class is not our custom class -> @Bean 
+
