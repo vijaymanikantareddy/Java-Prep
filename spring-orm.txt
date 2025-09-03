@@ -1,0 +1,22 @@
+Spring ORM - Object Relational Model 
+
+Building blocks of Hiberante:
+hiberante.cfg.xml
+Configuration
+Session Factory
+Session
+Transaction Begin
+Commit
+
+
+Spring ORM
+DriverManagerDataSource
+SessionFactory -> Interface
+LocalSessionFactory
+    datasource 
+
+Transaction Management 
+@Transactional -> handle transaction automatically 
+    begin transaction 
+    commit transaction
+    close the transaction
