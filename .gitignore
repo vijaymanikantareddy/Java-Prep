@@ -1,0 +1,17 @@
+# Ignore Eclipse workspace/project settings
+eclipse-workspace/**/.classpath
+eclipse-workspace/**/.project
+eclipse-workspace/**/.settings/
+
+# Ignore build output
+eclipse-workspace/**/bin/
+eclipse-workspace/**/target/
+
+# Ignore general Java stuff
+*.class
+*.log
+
+# If you use Maven/Gradle
+target/
+build/
+.gradle/
