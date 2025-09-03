@@ -2,6 +2,7 @@ package com;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.jdbc.core.RowMapper;
 
@@ -27,8 +28,24 @@ public class Test {
 				return new Employee(rs.getInt(1), rs.getString(2), rs.getInt(3));
 			}
 		});
-		
+
 		System.out.println(employee);
+
+		// get all data
+		List<Employee> employeesList = template.query("select * from employees", new RowMapper<Employee>() {
+			@Override
+			public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
+				return new Employee(rs.getInt(1), rs.getString(2), rs.getInt(3));
+			}
+		});
+
+		System.out.println(employeesList);
+
+		// using lambda function
+		List<Employee> employeesList2 = template.query("Select * from Employees",
+				(rs, num) -> new Employee(rs.getInt(1), rs.getString(2), rs.getInt(3)));
+
+		System.out.println(employeesList2);
 	}
 
 }
