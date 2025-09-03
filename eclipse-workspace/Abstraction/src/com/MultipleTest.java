@@ -8,3 +8,4 @@ public class MultipleTest {
 		obj.m3();
 	}
 }
+
