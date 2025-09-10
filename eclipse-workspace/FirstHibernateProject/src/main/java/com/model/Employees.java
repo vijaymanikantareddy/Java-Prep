@@ -1,21 +1,21 @@
 package com.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class Employees {
-	
+
 	@Id
 	private int empId;
 	private String email;
-	private double salary;
+	private int salary;
 
 	public Employees() {
 
 	}
 
-	public Employees(int empId, String email, double salary) {
+	public Employees(int empId, String email, int salary) {
 		super();
 		this.empId = empId;
 		this.email = email;
@@ -38,11 +38,11 @@ public class Employees {
 		this.email = email;
 	}
 
-	public double getSalary() {
+	public int getSalary() {
 		return salary;
 	}
 
-	public void setSalary(double salary) {
+	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 

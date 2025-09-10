@@ -1,0 +1,35 @@
+Hibernate -> ORM Framework
+
+Framework -> Reduce our work (Boiler Plate Code)
+
+ORM -> Object Relational Mapping
+
+Java -> Object Oriented Programming 
+
+SQL -> Tables
+
+Object -> Tables 
+
+Select * from user;
+Table -> user
+id name email
+
+public User{
+    int id;
+    String name;
+    String email;
+}
+
+Steps in Hibernate:
+ SessionFactory -> Session is used to interact with database.
+
+Create configuration
+Configure hibernate.cfg.xml
+add Annotated Class
+Create SessionFactory
+Get Session
+Create an Object
+Begin Transaction using Session
+Use persist() to save the data.
+Commit the data using getTransaction().commit();
+

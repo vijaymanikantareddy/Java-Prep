@@ -1,0 +1,7 @@
+Steps in JDBC:
+1. Register
+2. Connection
+3. Statement
+4. Query
+5. Execute
+6. Close

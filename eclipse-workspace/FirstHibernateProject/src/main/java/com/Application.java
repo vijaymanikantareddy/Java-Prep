@@ -1,6 +1,7 @@
 package com;
 
 import org.hibernate.Session;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -16,7 +17,7 @@ public class Application {
 
 		Session session = sessionFactory.openSession();
 
-		Employees emp = new Employees(12, "fgh@gmail.com", 29000);
+		Employees emp = new Employees(120, "afafakdfajfajdfldsf@gmail.com", 999000);
 
 		session.beginTransaction();
 		// Insert
