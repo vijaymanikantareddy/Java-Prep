@@ -52,3 +52,7 @@ session.find()
 * Objects which are in Persistent state are proned to Dirty Checking.
 
 3. Detached -> Object gets Detached when session is closed.
+
+
+
+*--> @GeneratedValue -> It is not generating new value, it is just bringing the value from SQL to Java.

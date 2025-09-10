@@ -3,7 +3,7 @@ package com.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.model.Employees;
+import com.model.Employee;
 
 public class HibernateUtil {
 	private static SessionFactory sessionFactory = null;
@@ -12,7 +12,7 @@ public class HibernateUtil {
 		if (sessionFactory == null) {
 			Configuration cfg = new Configuration();
 			cfg.configure("hibernate.cfg.xml");
-			cfg.addAnnotatedClass(Employees.class);
+			cfg.addAnnotatedClass(Employee.class);
 
 			sessionFactory = cfg.buildSessionFactory();
 		}

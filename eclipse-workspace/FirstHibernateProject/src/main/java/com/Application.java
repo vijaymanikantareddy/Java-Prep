@@ -4,16 +4,16 @@ import org.hibernate.Session;
 
 import org.hibernate.SessionFactory;
 
-import com.model.Employees;
+import com.model.Employee;
 import com.util.HibernateUtil;
 
 public class Application {
 	public static void main(String[] args) {
 
 //		getData(2);
-//		insertData();
+		insertData();
 //		updateData();
-		deleteData();
+//		deleteData();
 	}
 
 	private static void insertData() {
@@ -21,7 +21,7 @@ public class Application {
 
 		Session session = sessionFactory.openSession();
 
-		Employees emp = new Employees(120, "afafakdfajfajdfldsf@gmail.com", 999000);
+		Employee emp = new Employee("ins@gmail.com", 988);
 
 		session.beginTransaction();
 		// Insert
@@ -34,15 +34,15 @@ public class Application {
 	public static void getData(int id) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
-		Employees employees = session.find(Employees.class, id);
-		System.out.println(employees);
+		Employee employee = session.find(Employee.class, id);
+		System.out.println(employee);
 	}
 
 	public static void updateData() {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 
-		Employees emp = session.find(Employees.class, 2);
+		Employee emp = session.find(Employee.class, 2);
 		emp.setEmpId(2);
 		emp.setSalary(24999);
 		session.beginTransaction();
@@ -57,7 +57,7 @@ public class Application {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 
-		Employees emp = session.find(Employees.class, 120);
+		Employee emp = session.find(Employee.class, 120);
 		session.beginTransaction();
 
 		session.remove(emp);
