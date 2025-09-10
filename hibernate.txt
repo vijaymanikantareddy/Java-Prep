@@ -21,7 +21,7 @@ public User{
 }
 
 Steps in Hibernate:
- SessionFactory -> Session is used to interact with database.
+    SessionFactory -> Session is used to interact with database.
 
 Create configuration
 Configure hibernate.cfg.xml
@@ -33,3 +33,22 @@ Begin Transaction using Session
 Use persist() to save the data.
 Commit the data using getTransaction().commit();
 
+Methods in Hibernate:
+1. Insert -> persist(object);
+2. Update -> merge(object);
+3. Delete -> remove(object);
+
+
+*** Dirty Checking *** (Happens only update)
+whenever you load the data from the database, just make small change, you need not merge() in the database, it will be automatically done.
+
+States in Hibernate:
+There are 3 States 
+1. Transient -> Not Associated with any session
+
+2. Persistent -> Object is Associated with session 
+session.persist(emp)
+session.find()
+* Objects which are in Persistent state are proned to Dirty Checking.
+
+3. Detached -> Object gets Detached when session is closed.
