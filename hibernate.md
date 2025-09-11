@@ -1,8 +1,3 @@
-Below is a Markdown file with the content you provided, formatted clearly for easy copying and pasting into your `.md` file. I've retained the structure and details from your input, ensuring it's well-organized with appropriate Markdown syntax. You can directly copy the content within the artifact tag into your Markdown file.
-
-<xaiArtifact artifact_id="f9e33928-43b2-44d9-929e-006296594f82" artifact_version_id="dda89f73-f6c7-4036-b8cb-57b7e849356d" title="hibernate-notes.md" contentType="text/markdown">
-# Hibernate Notes
-
 ## Key Concepts
 
 ### Framework
@@ -110,6 +105,3 @@ SELECT s FROM Student s;
 - **SQL Query**: Uses original SQL syntax.
 - **DML**: `session.createNativeMutationQuery()`.
 - **DQL**: `session.createNativeQuery()`.
-  </xaiArtifact>
-
-You can copy the entire content within the `<xaiArtifact>` tag (from `# Hibernate Notes` to the end) and paste it into your `.md` file. Let me know if you need further tweaks or additional formatting!
