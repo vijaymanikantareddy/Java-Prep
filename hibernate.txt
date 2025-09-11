@@ -55,4 +55,16 @@ session.find()
 
 
 
-*--> @GeneratedValue -> It is not generating new value, it is just bringing the value from SQL to Java.
+*--> @GeneratedValue -> It is not generating new value, it is just bringing the value from SQL to Java. (Reverse Bind the increment Value).
+
+
+find() -> DQL -> Select 
+
+HQL -> Hibernate Query Language
+select * from students;
+select s From Student s;
+
+DQL -> createSelectionQuery(); -> Select 
+
+DML -> createMutationQuery(); -> Insert, Update, Delete 
+
