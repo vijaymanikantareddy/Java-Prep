@@ -68,3 +68,7 @@ DQL -> createSelectionQuery(); -> Select
 
 DML -> createMutationQuery(); -> Insert, Update, Delete 
 
+NativeQuery --> SQL Query --> Original Query
+DML - session.createNativeMutationQuery()
+DQL - session.createNativeQuery() 
+
