@@ -1,21 +1,56 @@
-package com;
+package com.model;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Playlist implements Playable {
-	int playlistId;
-	String playlistName;
-	List<Song> playlistSongs;
+import com.contract.Playable;
 
-	Playlist() {
-		playlistSongs = new LinkedList<>();
+public class Playlist implements Playable {
+	private int playlistId;
+	private String playlistName;
+	private List<Song> playlistSongs = new ArrayList<>();
+
+	public Playlist() {
+
 	}
 
-	Playlist(int playlistId, String playlistName) {
+	public Playlist(int playlistId, String playlistName, List<Song> playlistSongs) {
+		super();
 		this.playlistId = playlistId;
 		this.playlistName = playlistName;
-		playlistSongs = new LinkedList<>();
+		this.playlistSongs = playlistSongs;
+	}
+
+	public Playlist(int playlistId, String playlistName) {
+		super();
+		this.playlistId = playlistId;
+		this.playlistName = playlistName;
+
+	}
+
+	public int getPlaylistId() {
+		return playlistId;
+	}
+
+	public void setPlaylistId(int playlistId) {
+		this.playlistId = playlistId;
+	}
+
+	public String getPlaylistName() {
+		return playlistName;
+	}
+
+	public void setPlaylistName(String playlistName) {
+		this.playlistName = playlistName;
+	}
+
+	public List<Song> getPlaylistSongs() {
+		return playlistSongs;
+	}
+
+	public void setPlaylistSongs(List<Song> playlistSongs) {
+		this.playlistSongs = playlistSongs;
 	}
 
 	public void addSong(Song song) {

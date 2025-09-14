@@ -1,0 +1,9 @@
+Projects: 
+
+Mini Projects: 
+Mini Project 1 - Thomas travels
+Mini Project 2 - Console Based Music Player
+Mini Project 3 - Gated Community - Complaint Tracker
+
+Major Projects:
+Major Project 1 - Smart Bank Management System

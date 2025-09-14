@@ -1,11 +1,11 @@
-package com;
+package com.model;
 
 public class Song {
 	private int songId;
 	private String title, artist;
 	private double duration;
 
-	Song() {
+	public Song() {
 
 	}
 

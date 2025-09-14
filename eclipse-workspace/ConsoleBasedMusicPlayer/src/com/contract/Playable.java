@@ -1,4 +1,4 @@
-package com;
+package com.contract;
 
 public interface Playable {
 	void play(String title);
