@@ -74,3 +74,8 @@ DQL - session.createNativeQuery()
 
 Composite Primary Key
 
+Named Queries:
+* execution will be faster
+* Pre compiled query
+
+

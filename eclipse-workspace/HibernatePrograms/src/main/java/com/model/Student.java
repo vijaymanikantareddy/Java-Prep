@@ -11,7 +11,7 @@ import jakarta.persistence.NamedQuery;
 @Entity
 @Table(name = "student")
 @NamedQueries({ @NamedQuery(name = "allstudents", query = "FROM Student"),
-		@NamedQuery(name = "updatestudents", query = "update Student set name=:name where studentId=:studentId") })
+		@NamedQuery(name = "updatestudent", query = "update Student set name=:name where studentId=:studentId") })
 
 public class Student {
 	@Id
