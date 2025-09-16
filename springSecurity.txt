@@ -1,0 +1,68 @@
+Spring Security:
+
+Rest APIs
+    /orders
+    /buy
+    /revenue
+    /cancel
+
+    Flipkart
+        /orders
+        /buy
+
+Authentication vs Authorization
+
+Authentication: Validate a user.
+eg: Login
+username: angelpriya
+password: 1234
+
+Authorization: Roles
+eg: 
+Instagram Revenue --> /revenue?country=India
+Instagram server/cluster details
+Instagram Active Users --> /users/active?country=India
+
+Amazon: 
+Authenticated user: buy a product
+Authorized user: add a product 
+
+
+Client -> Filter -> AuthenticationManager -> AuthenticationProvider -> UserDetailsService (loadUserByUserName()) 
+-> UserDetails -> PasswordEncoder -> Dispatched Servlet -> Controller 
+
+
+password -> salt -> encrypt -> stored in DB
+
+
+AuthenticationProvider:
+    * DAOAuthenticationProvider
+        username + password
+        /buy
+        /cart
+        /orders 
+    * JWTAuthenticationProvider -> JSONWebToken
+        Login -> Generate a token 
+    * OAuthAuthenticationProvider
+        Sign in With Google
+        Sign in with facebook
+    * LDapAuthenticationProvider
+
+
+UserDetails
+    InMemoryUserDetails --> Hardcoded in codebase
+        username: vijay
+        password: thelidhu
+
+    DB:
+        SignUp -> DB
+        Login(username, password) -> UserNamePasswordAuthenticationFilter -> AuthenticationManager -> DAOAuthenticationProvider -> UserDetailsService (loadUserByUserName()) -> UserDetails -> go to db username and password ->  
+
+        SecurityContext -> Authentication 
+
+    JWT:
+        SignUp -> DB
+        Login(username, password) -> JWTAuthenticationFilter -> AuthenticationManager -> JWTAuthenticationProvider -> UserDetailsService -> UserDetails -> Generate a JWT Token -> Send Token to Client
+
+        /buy(token) -> JWTAuthenticationFilter
+        /orders(token)
