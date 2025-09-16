@@ -79,3 +79,31 @@ Named Queries:
 * Pre compiled query
 
 
+Mappings: (Similar to Joins):
+
+* One to One -> Uni Directional
+    User -> Passport
+
+    Bi Directional 
+    @JsonBackreference
+User 
+id name age passport 
+
+Passport
+passId passNum issuedDate issuedPlace expiryDate
+
+* One to Many 
+User -> Order 
+OrderId productName quantity 
+
+* Many to One
+Order -> User
+
+* Many to Many
+FLM
+
+Students -> Multiple Courses 
+Courses -> Multiple Students
+
+Cascading:
+user - save automatic passport 
