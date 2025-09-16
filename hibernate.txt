@@ -72,3 +72,5 @@ NativeQuery --> SQL Query --> Original Query
 DML - session.createNativeMutationQuery()
 DQL - session.createNativeQuery() 
 
+Composite Primary Key
+

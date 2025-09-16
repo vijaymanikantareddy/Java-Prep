@@ -1,6 +1,6 @@
-## Key Concepts
+# Key Concepts
 
-### Framework
+## Framework
 
 - **Framework**: Reduces boilerplate code and simplifies development.
 

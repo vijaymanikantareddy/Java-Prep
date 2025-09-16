@@ -1,5 +1,8 @@
 package com.model;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class CarId {
 	private int id;
 	private String engineNumber;

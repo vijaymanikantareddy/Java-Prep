@@ -4,8 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.Table;
+import jakarta.persistence.NamedQuery;
 
 @Entity
+@Table(name = "student")
+@NamedQueries({ @NamedQuery(name = "allstudents", query = "FROM Student"),
+		@NamedQuery(name = "updatestudents", query = "update Student set name=:name where studentId=:studentId") })
+
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
