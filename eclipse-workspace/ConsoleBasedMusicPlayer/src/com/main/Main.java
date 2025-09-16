@@ -76,26 +76,30 @@ public class Main {
 				musicPlayer.createPlaylist(title);
 				break;
 			case 6:
+				// DONE
 				// Add Song to Playlist
 				System.out.println("Enter playlist name: ");
 				String playlistNameToAdd = sc.nextLine();
 
-				System.out.println("Enter Title: ");
+				System.out.println("Enter Song Title: ");
 				String songTitle = sc.nextLine();
 
 //				newSong = new Song(songId, songTitle, artist, duration);
 				musicPlayer.addSongToPlaylist(playlistNameToAdd, songTitle);
 				break;
 			case 7:
+				// DONE
 				// Display All Playlists
 				musicPlayer.displayAllPlaylists();
 				break;
 			case 8:
+				// DONE
 				// Display Songs in Playlist
 				System.out.println("Enter Playlist name: ");
-				title = sc.nextLine();
-				musicPlayer.playPlaylist(title);
+				String playlistName= sc.nextLine();
+				musicPlayer.playPlaylist(playlistName);
 				break;
+				
 			case 9:
 				// Play Song in Playlist
 				System.out.println("Press 1 to Play using Song title \n");
@@ -103,7 +107,7 @@ public class Main {
 				int choice = sc.nextInt();
 				if (choice == 1) {
 					String mySongTitle = sc.nextLine();
-
+					
 				} else {
 					int mySongId = sc.nextInt();
 				}

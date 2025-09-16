@@ -134,10 +134,10 @@ public class MusicPlayer {
 		System.out.println("Playlist deleted successfully");
 	}
 
-	public void playPlaylist(String title) {
+	public void playPlaylist(String playlistName) {
 		int index = -1;
 		for (int i = 0; i < playlists.size(); i++) {
-			if (playlists.get(i).getPlaylistName().equals(title)) {
+			if (playlists.get(i).getPlaylistName().equalsIgnoreCase(playlistName)) {
 				index = i;
 				break;
 			}
@@ -147,10 +147,8 @@ public class MusicPlayer {
 			return;
 		}
 
-		System.out.println("Playing the songs of the playlist " + title);
-		for (Song song : playlists.get(index).getPlaylistSongs()) {
-			System.out.println(song);
-		}
+		System.out.println("Playing the songs of the playlist " + playlistName);
+		playlists.get(index).displaySongs();
 
 	}
 
@@ -168,6 +166,14 @@ public class MusicPlayer {
 	}
 
 	public void displayAllPlaylists() {
+		System.out.println("All the playlists available are: ");
+		for (Playlist p : playlists) {
+			System.out.println(p);
+		}
+	}
+	
+	public void playInPlaylist() {
+		Playlist playlist = null;
 		for (Playlist p : playlists) {
 			System.out.println(p);
 		}

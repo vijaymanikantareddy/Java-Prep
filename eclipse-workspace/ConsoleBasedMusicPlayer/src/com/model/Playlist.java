@@ -10,6 +10,8 @@ public class Playlist implements Playable {
 	private int playlistId;
 	private String playlistName;
 	private List<Song> playlistSongs = new ArrayList<>();
+	private Song currentPlaying = null;
+	private boolean pause = false;
 
 	public Playlist() {
 
@@ -99,32 +101,103 @@ public class Playlist implements Playable {
 
 	@Override
 	public void play(String title) {
-		System.out.println("Song titled: " + title + " is playing");
+
+		Song songObj = null;
+		for (Song song : playlistSongs) {
+			if (song.getTitle() != null && song.getTitle().equalsIgnoreCase(title)) {
+				songObj = song;
+			}
+		}
+		if (songObj != null) {
+			System.out.println("Song titled: " + songObj.getTitle() + " is playing");
+			currentPlaying = songObj;
+			pause = false;
+		} else {
+			System.out.println("Song not in playlist");
+		}
 	}
 
 	@Override
 	public void play(int songId) {
-		System.out.println("Song titled: " + songId + " is playing");
+		Song songObj = null;
+		for (Song song : playlistSongs) {
+			if (song.getSongId() == songId) {
+				songObj = song;
+			}
+		}
+		if (songObj != null) {
+			System.out.println("Song ID: " + songObj.getSongId() + " is playing");
+			pause = false;
+			currentPlaying = songObj;
+		} else {
+			System.out.println("Song not in playlist");
+		}
 	}
 
 	@Override
 	public void pause(String title) {
-		System.out.println("Song titled: " + title + " is paused");
+		if (currentPlaying != null && currentPlaying.getTitle().equalsIgnoreCase(title)) {
+			if (!pause) {
+				pause = true;
+				System.out.println("Song titled: " + currentPlaying.getTitle() + " is paused");
+
+			} else {
+				System.out.println("Song is Already Paused");
+			}
+
+		} else {
+			System.out.println("Nothing to pause, please play a song to pause");
+		}
 	}
 
 	@Override
 	public void pause(int songId) {
-		System.out.println("Song titled: " + songId + " is paused");
+
+		if (currentPlaying != null && currentPlaying.getSongId() == songId) {
+			if (!pause) {
+				pause = true;
+				System.out.println("Song ID: " + songId + " is paused");
+			} else {
+				System.out.println("Song is Already Paused");
+			}
+
+		} else {
+			System.out.println("Nothing to pause, please play a song to pause");
+		}
 	}
 
 	@Override
 	public void stop(String title) {
-		System.out.println("Song titled: " + title + " is stopped");
+		if (currentPlaying != null && currentPlaying.getTitle().equalsIgnoreCase(title)) {
+			if (!pause) {
+				pause = true;
+				System.out.println("Song titled: " + currentPlaying.getTitle() + " is stopped");
+				currentPlaying = null;
+			} else {
+				System.out.println("Song is Already Stopped");
+			}
+
+		} else {
+			System.out.println("Nothing to Stop, please play a song to stop");
+		}
 	}
 
 	@Override
 	public void stop(int songId) {
 		System.out.println("Song titled: " + songId + " is stopped");
+
+		if (currentPlaying != null && currentPlaying.getSongId() == songId) {
+			if (!pause) {
+				pause = true;
+				System.out.println("Song ID: " + songId + " is stopped");
+				currentPlaying = null;
+			} else {
+				System.out.println("Song is Already Stopped");
+			}
+
+		} else {
+			System.out.println("Nothing to Stop, please play a song to stop");
+		}
 	}
 
 	@Override
