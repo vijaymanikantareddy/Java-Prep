@@ -9,14 +9,6 @@ public class Passport {
 	@Id
 	private int passportNumber;
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
 	private String issuedPlace;
 
 	@OneToOne(mappedBy = "passport")
@@ -37,6 +29,14 @@ public class Passport {
 		super();
 		this.passportNumber = passportNumber;
 		this.issuedPlace = issuedPlace;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public int getPassportNumber() {

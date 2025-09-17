@@ -13,7 +13,7 @@ public class OneToOneMapping {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 
-		insert(session);
+//		insert(session);
 
 //		select(session);
 
