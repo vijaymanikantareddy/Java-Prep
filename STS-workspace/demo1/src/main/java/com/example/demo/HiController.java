@@ -9,4 +9,5 @@ public class HiController {
 	public String hi() {
 		return "Hi";
 	}
+
 }
