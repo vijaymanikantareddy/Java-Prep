@@ -1,0 +1,40 @@
+Java Servlets
+
+HTTP: Hyper Text Transfer Protocol
+HTTPS: Hyper Text Transfer Protocol Security
+
+Client <---------------API---------------> Server 
+
+SSL: Secure Sockets Layer 
+
+Types of Servers:
+1. DNS 
+2. Tomcat
+3. Glassfish
+4. Jetty
+5. Netty
+6. Jboss
+
+Dynamic Web Applications
+
+Servlets: Servlets handles all the API calls.
+
+API -> Request -> Servlet -> Java 
+
+Server : Server is a Servlet Container. 
+
+eg: Tomcat - 100 servlets 
+
+Client -> Request -> Server (Tomcat) -> Pick a Servlet -> Handover to Actual Java Code 
+
+
+Types of Servlets:
+1. Generic Servlet
+2. HTTP Servlet
+
+
+Tomcat Latest -> Jakarta
+Tomcat 9 -> Javax
+Tomcat 10 -> Jakarta
+
+
