@@ -28,13 +28,47 @@ eg: Tomcat - 100 servlets
 Client -> Request -> Server (Tomcat) -> Pick a Servlet -> Handover to Actual Java Code 
 
 
-Types of Servlets:
-1. Generic Servlet
-2. HTTP Servlet
-
 
 Tomcat Latest -> Jakarta
 Tomcat 9 -> Javax
 Tomcat 10 -> Jakarta
 
 
+Types of Servlets:
+1. Generic Servlet
+    all protocols
+2. HTTP Servlet
+    only HTTP Protocol
+
+Like Thread Lifecycle there is Lifecycle for Servlets
+
+There 3 Steps:
+1. init -> Initialization
+    init()
+2. service -> Actual Execution
+    doGet()
+    doPost()
+    doPut()
+    doDelete()
+3. destroy -> servlet is removed from memory
+    shut down your server 
+    refresh - redeployed
+    destroy() 
+
+HTTP Methods:
+Get -> when you want to see data (select)
+Post -> saving
+Put -> update 
+Delete -> delete
+
+
+Client <-> Server
+Frontend <-> Backend
+HTML,       
+CSS,        
+JS,         
+React       
+
+HTML: Hyper Text Markup Language
+
+Client -> Submit -> Server -> servlet -> doGet -> Request, Response data -> Request
