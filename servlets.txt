@@ -89,3 +89,15 @@ JSP => Java + HTML
 3. Directives -> Tells the browser how to process the page. 
     To import the java classes.
     <%@     %>
+
+
+Scopes
+1. request -> it is available once per Http request
+example: /signup -> servlet -> home.jsp 
+
+2. Session -> Data is available across the session.
+example: Chrome -> /signup -> servlet -> session -> home.jsp, home2.jsp 
+setting data in Session, so available across the session 
+
+3. Application / Server 
+Available across the server in all sessions.
