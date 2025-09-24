@@ -1,8 +1,8 @@
 package com;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -21,9 +21,12 @@ public class SignUpServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		PrintWriter writer = response.getWriter();
-		response.setContentType("text/html");
-		writer.append("Hi " + username + "!!! You are Successfully Registered!!!");
+
+		request.setAttribute("name", username);
+		request.setAttribute("password", password);
+
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
+		requestDispatcher.forward(request, response);
 	}
 
 }

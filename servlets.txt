@@ -72,3 +72,20 @@ React
 HTML: Hyper Text Markup Language
 
 Client -> Submit -> Server -> servlet -> doGet -> Request, Response data -> Request
+
+
+Struts - Old Framework
+Now it was replaced by Spring 
+
+JSP --> Java Server Page
+JSP => Java + HTML 
+
+1. Scriptlet
+    <%  int a = 10;
+    out.println(a); 
+     %>
+2. Expression -> To Print Something
+    <%= a  %>
+3. Directives -> Tells the browser how to process the page. 
+    To import the java classes.
+    <%@     %>
