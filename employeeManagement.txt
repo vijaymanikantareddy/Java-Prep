@@ -1,0 +1,36 @@
+Employee Management
+
+FLM - Admin
+
+Signup
+Login 
+
+Employees 
+DB 
+
+Add Employee
+
+Form
+Name:
+Age:
+Gender:
+Exp:
+Phone Number: 
+Email: 
+Add Button
+
+Steps: 
+MySQL Tables 
+Dynamic Web Application
+MySQL Connector 
+JSP 
+Servlet 
+DB - Connection
+JDBC
+
+
+
+
+Database:
+Users Table 
+Employee Table 
