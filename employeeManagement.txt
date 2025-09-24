@@ -11,10 +11,9 @@ DB
 Add Employee
 
 Form
+Employee ID:
 Name:
-Age:
-Gender:
-Exp:
+Age: 
 Phone Number: 
 Email: 
 Add Button
@@ -29,8 +28,8 @@ DB - Connection
 JDBC
 
 
-
-
 Database:
 Users Table 
 Employee Table 
+
+DAO -> Data Access Object

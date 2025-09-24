@@ -6,5 +6,8 @@ public class Constants {
 	public static final String USERNAME = "root";
 	public static final String PASSWORD = "root";
 	public static final String INSERT_USER = "INSERT INTO USERS VALUES(?, ?)";
+	public static final String GET_USER = "SELECT * FROM USERS WHERE email=?";
+	public static final String INSERT_EMPLOYEE = "INSERT INTO EMPLOYEES(name, age, email, phone_number, salary) VALUES(?, ?, ?, ?, ?)";
+	public static final String GET_ALL_EMPLOYEES = "SELECT * FROM EMPLOYEES";
 
 }

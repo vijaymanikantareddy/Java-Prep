@@ -1,9 +1,10 @@
 package com.flm.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
-import com.flm.dao.UserDao;
-import com.flm.model.User;
+import com.flm.dao.EmployeeDao;
+import com.flm.model.Employee;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -12,27 +13,24 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/signup")
-public class SignupServlet extends HttpServlet {
+@WebServlet("/employees")
+public class EmployeeServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 
-	public SignupServlet() {
+	public EmployeeServlet() {
 		super();
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-		String confirmPassword = request.getParameter("confirm-password");
+		EmployeeDao employeeDao = new EmployeeDao();
 
-		User user = new User(email, password);
-		UserDao userDao = new UserDao();
-		userDao.saveUser(user);
+		List<Employee> allEmployees = employeeDao.getAllEmployees();
+		request.setAttribute("empList", allEmployees);
 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.html");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("employees.jsp");
 		requestDispatcher.forward(request, response);
-
 	}
 
 }

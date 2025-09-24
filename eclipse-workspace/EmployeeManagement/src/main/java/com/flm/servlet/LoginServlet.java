@@ -11,13 +11,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/signup")
-public class SignupServlet extends HttpServlet {
-
-	public SignupServlet() {
-		super();
-	}
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -28,10 +25,19 @@ public class SignupServlet extends HttpServlet {
 
 		User user = new User(email, password);
 		UserDao userDao = new UserDao();
-		userDao.saveUser(user);
 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.html");
-		requestDispatcher.forward(request, response);
+		boolean isValid = userDao.validateUser(user);
+
+		if (isValid) {
+			HttpSession session = request.getSession();
+			String name = user.getEmail().split("@")[0];
+			session.setAttribute("email", name);
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("employees");
+			requestDispatcher.forward(request, response);
+		} else {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.html");
+			requestDispatcher.forward(request, response);
+		}
 
 	}
 
