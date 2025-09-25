@@ -1,0 +1,79 @@
+Spring MVC
+Model View Controller 
+
+Models - POJO classes / data
+Views - Html / JSP 
+Controller - servlet 
+
+
+Front Contoller Design Pattern 
+Client ----(Request)---> Dispatcher Servlet ---> Servlet 1, Servlet 2, Servlet 3.....
+
+* Only One Servlet is Configured i.e., Dispatcher Servlet
+
+
+@Controller 
+class EmployeeController{
+
+    @RequestMapping("/get")
+    public void getEmployee(){
+
+    }
+
+    @RequestMapping("/save")
+    public void saveEmployees(){
+
+    }
+
+    @RequestMapping("/getAll")
+    public void getAllEmployees(){
+
+    }
+}
+
+*** Dispatcher Servlet is a frontcontroller which receives the requests coming from the client and redirects them to corresponding controller. ***
+
+
+<servlet> 
+    <servlet-name> DS </servlet-name>
+    <servlet-class> org.spring.DispatchedServlet </servlet-class>
+</servlet>
+
+<url-pattern> /hi </url-pattern>
+
+http://localhost:8080/Spring/hi/getEmployee 
+
+
+HTTP Methods:
+GET     -> Server Sends some data to Client 
+POST    -> Client Sends some data to be saved at Server 
+DELETE  -> Client asks to delete some data from Server
+PUT     -> Client Sends Some Modified Data (Update) -> Full Update 
+PATCH   -> Update -> Small Update like mobileNumber (Partial Update)
+
+Status Codes by Server: 
+
+1xx -> informational 
+
+2xx -> Success
+    200 - OK
+    201 - Created
+    202 - Accepted
+    204 - No Content (Deleted)
+
+3xx -> Redirection 
+
+4xx -> Client Side Error 
+    400 - Bad Request
+    401 - Unauthorized 
+    403 - Forbidden (Login Credentials)
+    404 - Not Found 
+    405 - Method No Allowed (Post)
+    409 - Conflict
+
+5xx -> Server Side Error 
+    500 - Internal Server Error 
+    502 - Bad Gateway
+    
+
+ 
