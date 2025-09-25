@@ -55,4 +55,15 @@ public class EmployeeDao {
 		}
 	}
 
+	public void deleteEmployee(int id) {
+		Connection connection;
+		try {
+			connection = DBConnection.getConnection();
+			PreparedStatement statement = connection.prepareStatement(Constants.DELETE_EMPLOYEE);
+			statement.setInt(1, id);
+			statement.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }
