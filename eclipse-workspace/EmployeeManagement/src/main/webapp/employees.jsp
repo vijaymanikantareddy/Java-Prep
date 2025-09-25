@@ -22,6 +22,7 @@
 			<th>Phone Number</th>
 			<th>Salary</th>
 			<th>Delete Employee</th>
+			<th>Update Employee</th>
 		</tr>
 		<%
 		List<Employee> empList = (List<Employee>) request.getAttribute("empList");
@@ -35,7 +36,8 @@
 			<td><%=emp.getEmail()%></td>
 			<td><%=emp.getPhoneNum()%></td>
 			<td><%=emp.getSalary()%></td>
-			<td><a href="delete?id=<%=emp.getEmpId()%>">Delete</a></td>
+			<td><a href="delete?id=<%=emp.getEmpId() %>">Delete</a></td>
+			<td><a href="updateEmp.jsp?id=<%=emp.getEmpId() %>">Update</a></td>
 		</tr>
 		<%
 		}

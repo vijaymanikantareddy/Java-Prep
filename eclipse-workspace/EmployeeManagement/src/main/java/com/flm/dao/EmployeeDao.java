@@ -66,4 +66,46 @@ public class EmployeeDao {
 			e.printStackTrace();
 		}
 	}
+
+	public Employee getEmployee(int empId) {
+		Connection connection;
+		Employee emp = null;
+		try {
+			connection = DBConnection.getConnection();
+			PreparedStatement statement = connection.prepareStatement(Constants.GET_EMPLOYEE);
+			statement.setInt(1, empId);
+			ResultSet resultSet = statement.executeQuery();
+
+			while (resultSet.next()) {
+				String name = resultSet.getString(2);
+				int age = resultSet.getInt(3);
+				String email = resultSet.getString(4);
+				String phoneNum = resultSet.getString(5);
+				double salary = resultSet.getDouble(6);
+
+				emp = new Employee(empId, name, age, email, phoneNum, salary);
+
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		return emp;
+	}
+
+	public void updateEmployee(Employee emp) {
+		Connection connection;
+		try {
+			connection = DBConnection.getConnection();
+			PreparedStatement statement = connection.prepareStatement(Constants.UPDATE_EMPLOYEE);
+			statement.setString(1, emp.getName());
+			statement.setInt(2, emp.getAge());
+			statement.setString(3, emp.getEmail());
+			statement.setString(4, emp.getPhoneNum());
+			statement.setDouble(5, emp.getSalary());
+			statement.setInt(6, emp.getEmpId());
+			statement.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }
