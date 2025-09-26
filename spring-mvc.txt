@@ -74,6 +74,17 @@ Status Codes by Server:
 5xx -> Server Side Error 
     500 - Internal Server Error 
     502 - Bad Gateway
-    
 
+Spring MVC: 
+
+ InternalViewResolver 
+ Return "home.jsp"
+ /WEB-INF/views/home.jsp 
+
+ Take two arguments - prefix, suffix 
+ prefix -> /WEB-INF/views/
+ suffix -> .jsp 
  
+ @Controller + @ResponseBody = resolve data 
+
+ @Controller = resolve views 
