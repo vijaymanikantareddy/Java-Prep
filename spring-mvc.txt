@@ -77,7 +77,7 @@ Status Codes by Server:
 
 Spring MVC: 
 
- InternalViewResolver 
+ InternalResourceViewResolver 
  Return "home.jsp"
  /WEB-INF/views/home.jsp 
 
@@ -85,6 +85,18 @@ Spring MVC:
  prefix -> /WEB-INF/views/
  suffix -> .jsp 
  
- @Controller + @ResponseBody = resolve data 
+ @Controller + @ResponseBody = resolve data ==> @RestController 
 
  @Controller = resolve views 
+
+Controller Endpoint -> jsp 
+Model model 
+.addAttribute 
+
+HttpServletRequest
+
+@ModelAttribute Employee emp
+
+ thymeleaf: 
+ HTML + Dynamic Data 
+
