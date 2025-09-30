@@ -1,0 +1,55 @@
+Spring Boot:
+It is an advanced version of Spring 
+
+Additional Featues of Spring Boot:
+
+1. Auto Configuration
+    In Spring: 
+    Spring JDBC - XML 
+    mysql connector 
+    spring jdbc 
+    beans.xml 
+
+    datasource:
+        url
+        username
+        password 
+    
+    JDBC Template 
+    template.update 
+
+    SpringBoot offers SpringBoot JDBC 
+        Dependencies
+        application.properties/.yml file
+            url 
+            username 
+            password 
+
+            @Autowired 
+            JdbcTemplate jdbcTemplate; 
+            byType, byName, constructor 
+
+            Opinionated configuration 
+
+2. Embedded Server 
+    tomcat 
+    JAR file 
+
+3. Metrics, Healths 
+    health up/down 
+    jvm metrics 
+
+4. Actutator -> To show metrics 
+
+
+Advantages:
+1. AutoConfiguration
+2. Embedded Server
+3. Spring Boot Starter 
+4. Actutator support 
+5. Reduced Boiler Plate Code
+6. Faster Development 
+7. Production Ready Code 
+8. More suitable for Microservices Architecture 
+
+@SpringBootApplication = @ComponentScan + @Configuration + @EnableAutoConfiguration
