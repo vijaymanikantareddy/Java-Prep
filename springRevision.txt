@@ -1,0 +1,27 @@
+Spring:
+IOC 
+Container 
+Boiler
+
+Two types: 
+XML
+NoXML
+
+Core/Context -> To Understand Context
+Spring JDBC
+    DataSource
+    JDBC Template
+
+Spring ORM 
+    DataSource
+    LocalSessionFactoryBean 
+    @Transactional  
+
+Spring MVC 
+    Dispatcher Servlet
+
+@Controller -> views
+@Controller + @ResponseBody -> Data 
+@RestController -> Only Data 
+
+
