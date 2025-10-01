@@ -52,4 +52,13 @@ Advantages:
 7. Production Ready Code 
 8. More suitable for Microservices Architecture 
 
-@SpringBootApplication = @ComponentScan + @Configuration + @EnableAutoConfiguration
+@SpringBootApplication = @ComponentScan + @SpringBootConfiguration + @EnableAutoConfiguration
+
+
+How many ways, you can create spring boot project? 
+1. IDE (STS/Eclipse/IntelliJ)
+2. Spring Initializr 
+3. Maven CLI 
+
+
+
