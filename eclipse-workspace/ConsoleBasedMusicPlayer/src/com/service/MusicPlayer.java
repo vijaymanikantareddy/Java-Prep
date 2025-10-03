@@ -1,10 +1,8 @@
 package com.service;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
-import com.main.Main;
 import com.model.Playlist;
 import com.model.Song;
 
@@ -160,8 +158,9 @@ public class MusicPlayer {
 				break;
 			}
 		}
-		if (index == -1)
+		if (index == -1) {
 			return null;
+		}
 		return playlists.get(index);
 	}
 
@@ -171,11 +170,37 @@ public class MusicPlayer {
 			System.out.println(p);
 		}
 	}
-	
-	public void playInPlaylist() {
+
+	public void playInPlaylist(String playlistName, String title) {
 		Playlist playlist = null;
 		for (Playlist p : playlists) {
-			System.out.println(p);
+			if (p.getPlaylistName().equalsIgnoreCase(playlistName)) {
+				playlist = p;
+				break;
+			}
 		}
+		playlist.play(title);
+	}
+
+	public void pauseInPlaylist(String playlistName, String title) {
+		Playlist playlist = null;
+		for (Playlist p : playlists) {
+			if (p.getPlaylistName().equalsIgnoreCase(playlistName)) {
+				playlist = p;
+				break;
+			}
+		}
+		playlist.pause(title);
+	}
+
+	public void stopInPlaylist(String playlistName, String title) {
+		Playlist playlist = null;
+		for (Playlist p : playlists) {
+			if (p.getPlaylistName().equalsIgnoreCase(playlistName)) {
+				playlist = p;
+				break;
+			}
+		}
+		playlist.stop(title);
 	}
 }

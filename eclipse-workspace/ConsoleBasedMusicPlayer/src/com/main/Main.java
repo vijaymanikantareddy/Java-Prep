@@ -2,7 +2,6 @@ package com.main;
 
 import java.util.Scanner;
 
-import com.model.Song;
 import com.service.MusicPlayer;
 
 public class Main {
@@ -19,14 +18,10 @@ public class Main {
 			printDisplay();
 			int option = sc.nextInt();
 			sc.nextLine();
-//			if (option == 12)
-//				break;
 			switch (option) {
 
 			case 1:
-				// DONE
 				// Add New Song
-
 				System.out.print("Enter Song Title: ");
 				String title = sc.nextLine();
 				System.out.print("Enter Artist Name: ");
@@ -39,7 +34,6 @@ public class Main {
 				break;
 
 			case 2:
-				// DONE
 				// Update Existing Song
 				System.out.println("Enter existing song title: ");
 				String existTitle = sc.nextLine();
@@ -56,7 +50,6 @@ public class Main {
 				musicPlayer.updateSong(existTitle, newTitle, newArtist, newDuration);
 				break;
 			case 3:
-				// DONE
 				// Delete Song
 				System.out.println("Enter song title: ");
 				title = sc.nextLine();
@@ -64,87 +57,66 @@ public class Main {
 				musicPlayer.deleteSong(title);
 				break;
 			case 4:
-				// DONE
 				// Display All Songs
 				musicPlayer.displayAllSongs();
 				break;
 			case 5:
-				// DONE
 				// Create New Playlist
 				System.out.println("Enter playlist title: ");
 				title = sc.nextLine();
 				musicPlayer.createPlaylist(title);
 				break;
 			case 6:
-				// DONE
 				// Add Song to Playlist
 				System.out.println("Enter playlist name: ");
 				String playlistNameToAdd = sc.nextLine();
 
 				System.out.println("Enter Song Title: ");
 				String songTitle = sc.nextLine();
-
-//				newSong = new Song(songId, songTitle, artist, duration);
 				musicPlayer.addSongToPlaylist(playlistNameToAdd, songTitle);
 				break;
 			case 7:
-				// DONE
 				// Display All Playlists
 				musicPlayer.displayAllPlaylists();
 				break;
 			case 8:
-				// DONE
 				// Display Songs in Playlist
 				System.out.println("Enter Playlist name: ");
-				String playlistName= sc.nextLine();
+				String playlistName = sc.nextLine();
 				musicPlayer.playPlaylist(playlistName);
 				break;
-				
+
 			case 9:
 				// Play Song in Playlist
-				System.out.println("Press 1 to Play using Song title \n");
-				System.out.println("Press 2 to Play using Song ID: ");
-				int choice = sc.nextInt();
-				if (choice == 1) {
-					String mySongTitle = sc.nextLine();
-					
-				} else {
-					int mySongId = sc.nextInt();
-				}
+				System.out.println("Enter playlist name: ");
+				String playlist = sc.nextLine();
+				System.out.println("Enter the Song: ");
+				title = sc.nextLine();
+				musicPlayer.playInPlaylist(playlist, title);
 				break;
 			case 10:
 				// Pause Song in Playlist
-				System.out.println("Press 1 to Pause using Song title \n");
-				System.out.println("Press 2 to Pause using Song ID: ");
-				choice = sc.nextInt();
-				if (choice == 1) {
-					String mySongTitle = sc.nextLine();
-				} else {
-					int mySongId = sc.nextInt();
-				}
+				System.out.println("Enter playlist name: ");
+				playlist = sc.nextLine();
+				System.out.println("Enter the Song: ");
+				title = sc.nextLine();
+				musicPlayer.pauseInPlaylist(playlist, title);
 				break;
 			case 11:
-
 				// Stop Song in Playlist
-				System.out.println("Press 1 to stop using Song title \n");
-				System.out.println("Press 2 to stop using Song ID: ");
-				choice = sc.nextInt();
-				if (choice == 1) {
-					String mySongTitle = sc.nextLine();
-				} else {
-					int mySongId = sc.nextInt();
-				}
+				System.out.println("Enter playlist name: ");
+				playlist = sc.nextLine();
+				System.out.println("Enter the Song: ");
+				title = sc.nextLine();
+				musicPlayer.stopInPlaylist(playlist, title);
 				break;
 			case 12:
-				// DONE
 				System.out.println("Program Exited Successfully!!!");
 				running = false;
-
 				break;
 			default:
 				System.out.println("Enter Correct Option");
 				option = sc.nextInt();
-
 			}
 
 		}
