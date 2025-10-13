@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h2>Welcome to Gated Community</h2>
-	<a href="signup.jsp">Sign Up?</a>
+	<a href="signup.jsp">Sign Up?</a> 
+	<a href="login.jsp">Login</a>
 </body>
 </html>
