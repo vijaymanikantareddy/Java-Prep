@@ -1,12 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Admin Dashboard</title>
-  </head>
-  <body>
-    <h1>This is Admin Dashboard</h1>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<title>Admin Dashboard</title>
+</head>
+<body>
+	<h2>
+		Hello
+		<%=session.getAttribute("username")%>
+	</h2>
+	<ul>
+		<li><a href="">View all Complaints</a></li>
+		<li><a href="">Logout</a></li>
+	</ul>
+</body>
 </html>

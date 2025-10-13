@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,16 @@
 <title>Resident Dashboard</title>
 </head>
 <body>
-<h1>This is Resident Dashboard</h1>
+
+	<h2>
+		Hello
+		<%=session.getAttribute("username")%>
+	</h2>
+	<ul>
+		<li><a href="">Raise Complaint</a></li>
+		<li><a href="ResidentViewServlet">View my Complaints</a></li>
+		<li><a href="">Solved Complaints</a></li>
+		<li><a href="">Logout</a></li>
+	</ul>
 </body>
 </html>
