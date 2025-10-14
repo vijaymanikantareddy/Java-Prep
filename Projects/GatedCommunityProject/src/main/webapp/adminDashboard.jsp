@@ -13,7 +13,7 @@
 	</h2>
 	<ul>
 		<li><a href="">View all Complaints</a></li>
-		<li><a href="">Logout</a></li>
+		<li><a href="login.jsp">Logout</a></li>
 	</ul>
 </body>
 </html>

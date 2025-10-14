@@ -1,18 +1,19 @@
-<%@page import="com.flm.model.Complaint"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="com.*, java.util.*"%>
+<%@page import="com.flm.model.Complaint"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Resident View Complaint</title>
+<title>Complaint History</title>
 </head>
 <body>
+
 	<h2>
 		Hello
 		<%=session.getAttribute("username")%></h2>
-	<h2>Your Complaints are:</h2>
+	<h2>Your Complaints History are:</h2>
 	<%
 	List<Complaint> list = (List<Complaint>) request.getAttribute("list");
 	%>
@@ -24,8 +25,6 @@
 			<th>Subject</th>
 			<th>Description</th>
 			<th>Status</th>
-			<th>Update</th>
-			<th>Delete</th>
 		</tr>
 
 		<%
@@ -39,10 +38,6 @@
 			<td><%=complaint.getSubject()%></td>
 			<td><%=complaint.getDescription()%></td>
 			<td><%=complaint.getStatus()%></td>
-			<td><a
-				href="UpdateComplaintServlet?complaintId=<%=complaint.getComplaintId()%>">Edit</a></td>
-				
-			<td><a href="DeleteComplaintServlet?complaintId=<%=complaint.getComplaintId()%>">Delete</a></td>
 		</tr>
 		<%
 		}

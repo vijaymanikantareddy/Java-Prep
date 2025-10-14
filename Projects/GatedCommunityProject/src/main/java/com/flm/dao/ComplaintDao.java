@@ -35,4 +35,43 @@ public class ComplaintDao {
 			e.printStackTrace();
 		}
 	}
+
+	public List<Complaint> getComplaintsByUserAndStatus(int residentId, String status) {
+		try (Session session = HibernateUtil.getConnection().openSession()) {
+			List<Complaint> list = session.createQuery("From Complaint Where userId=:residentId and status=:status")
+					.setParameter("residentId", residentId).setParameter("status", status).list();
+			return list;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public Complaint getComplaintById(int complaintId) {
+
+		try (Session session = HibernateUtil.getConnection().openSession()) {
+			Complaint complaint = (Complaint) session.createQuery("From Complaint where complaintId=:complaintId")
+					.setParameter("complaintId", complaintId).uniqueResult();
+			return complaint;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public void updateComplaint(Complaint complaint) {
+		Transaction ts = null;
+		try (Session session = HibernateUtil.getConnection().openSession()) {
+
+			ts = session.beginTransaction();
+			session.merge(complaint);
+
+			ts.commit();
+		} catch (Exception e) {
+			if (ts.isActive() && ts != null) {
+				ts.rollback();
+			}
+			e.printStackTrace();
+		}
+	}
 }

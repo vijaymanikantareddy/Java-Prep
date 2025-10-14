@@ -15,9 +15,8 @@
 	<ul>
 		<li><a href="raiseComplaint.jsp">Raise Complaint</a></li>
 		<li><a href="ResidentViewServlet">View my Complaints</a></li>
-		<li><a href="">Update/Cancel</a></li>
-		<li><a href="">Solved Complaints</a></li>
-		<li><a href="">Logout</a></li>
+		<li><a href="ComplaintHistoryServlet">Solved Complaints</a></li>
+		<li><a href="login.jsp">Logout</a></li>
 	</ul>
 </body>
 </html>

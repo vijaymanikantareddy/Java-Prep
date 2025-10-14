@@ -13,9 +13,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/ResidentViewServlet")
-public class ResidentViewServlet extends HttpServlet {
-
+@WebServlet("/ComplaintHistoryServlet")
+public class ComplaintHistoryServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doPost(req, resp);
@@ -26,10 +25,8 @@ public class ResidentViewServlet extends HttpServlet {
 		ComplaintDao complaintDao = new ComplaintDao();
 		HttpSession session = req.getSession(true);
 		int residentId = (int) session.getAttribute("residentId");
-		List<Complaint> list = complaintDao.getComplaintsByUser(residentId);
+		List<Complaint> list = complaintDao.getComplaintsByUserAndStatus(residentId, "resolved");
 		req.setAttribute("list", list);
-		req.getRequestDispatcher("residentViewComplaint.jsp").forward(req, resp);
-
+		req.getRequestDispatcher("ComplaintHistory.jsp").forward(req, resp);
 	}
-
 }
