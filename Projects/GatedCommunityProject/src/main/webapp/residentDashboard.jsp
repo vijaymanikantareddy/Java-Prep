@@ -10,11 +10,12 @@
 
 	<h2>
 		Hello
-		<%=session.getAttribute("username")%>
+		<%=session.getAttribute("username")%>!!! Welcome to Resident Dashboard
 	</h2>
 	<ul>
-		<li><a href="">Raise Complaint</a></li>
+		<li><a href="raiseComplaint.jsp">Raise Complaint</a></li>
 		<li><a href="ResidentViewServlet">View my Complaints</a></li>
+		<li><a href="">Update/Cancel</a></li>
 		<li><a href="">Solved Complaints</a></li>
 		<li><a href="">Logout</a></li>
 	</ul>

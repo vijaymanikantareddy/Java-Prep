@@ -23,6 +23,7 @@ public class LoginServlet extends HttpServlet {
 		ResidentDao residentDao = new ResidentDao();
 
 		Resident resident = residentDao.isValid(username, password);
+
 		HttpSession session = req.getSession(true);
 		session.setAttribute("residentId", resident.getResidentId());
 		session.setAttribute("username", resident.getUsername());

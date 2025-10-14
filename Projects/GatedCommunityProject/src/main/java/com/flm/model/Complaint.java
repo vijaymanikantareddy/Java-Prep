@@ -16,6 +16,7 @@ public class Complaint {
 	@Column(name = "complaint_id")
 	private int complaintId;
 
+	@Column(name = "user_id")
 	private int userId;
 
 	private String category;
