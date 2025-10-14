@@ -74,4 +74,20 @@ public class ComplaintDao {
 			e.printStackTrace();
 		}
 	}
+
+	public void deleteComplaint(Complaint complaint) {
+		Transaction ts = null;
+		try (Session session = HibernateUtil.getConnection().openSession()) {
+
+			ts = session.beginTransaction();
+			session.remove(complaint);
+
+			ts.commit();
+		} catch (Exception e) {
+			if (ts.isActive() && ts != null) {
+				ts.rollback();
+			}
+			e.printStackTrace();
+		}
+	}
 }

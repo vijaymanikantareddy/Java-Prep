@@ -11,8 +11,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/UpdateComplaintServlet")
-public class UpdateComplaintServlet extends HttpServlet {
+@WebServlet("/CancelComplaintServlet")
+public class CancelComplaintServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doPost(req, resp);
@@ -20,13 +20,10 @@ public class UpdateComplaintServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 		int complaintId = Integer.parseInt(req.getParameter("complaintId"));
 		ComplaintDao complaintDao = new ComplaintDao();
 		Complaint complaint = complaintDao.getComplaintById(complaintId);
-
-		req.setAttribute("complaint", complaint);
-		req.getRequestDispatcher("UpdateComplaint.jsp").forward(req, resp);
-
+		complaintDao.deleteComplaint(complaint);
+		resp.sendRedirect("ResidentViewServlet");
 	}
 }

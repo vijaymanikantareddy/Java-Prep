@@ -42,7 +42,7 @@
 			<td><a
 				href="UpdateComplaintServlet?complaintId=<%=complaint.getComplaintId()%>">Edit</a></td>
 				
-			<td><a href="DeleteComplaintServlet?complaintId=<%=complaint.getComplaintId()%>">Delete</a></td>
+			<td><a href="CancelComplaintServlet?complaintId=<%=complaint.getComplaintId()%>">Delete</a></td>
 		</tr>
 		<%
 		}
