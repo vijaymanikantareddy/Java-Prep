@@ -90,4 +90,15 @@ public class ComplaintDao {
 			e.printStackTrace();
 		}
 	}
+
+	public List<Complaint> getAllComplaints() {
+		try (Session session = HibernateUtil.getConnection().openSession()) {
+			List<Complaint> list = session.createQuery("From Complaint").list();
+			return list;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 }
