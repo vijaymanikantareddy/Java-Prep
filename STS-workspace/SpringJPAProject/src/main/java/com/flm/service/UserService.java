@@ -31,4 +31,34 @@ public class UserService {
 		List<User> users = userRepository.findAll();
 		System.out.println(users);
 	}
+
+	public void getUserByName() {
+		User user2 = userRepository.findByUserName("Vijay");
+		System.out.println(user2);
+	}
+
+	public void getUserByAge() {
+		User user3 = userRepository.findByUserAge(20);
+		System.out.println(user3);
+	}
+
+	public void findByName() {
+		User user = userRepository.findByName("Vijay");
+		System.out.println(user);
+	}
+
+	public User findByNameAndAge(String name, int age) {
+		User user = userRepository.findByNameAndAge(name, age);
+		return user;
+	}
+
+	public List<User> findByNameOrAge(String name, int age) {
+		List<User> users = userRepository.findByNameOrAge(name, age);
+		return users;
+	}
+
+	public List<User> findByNameStartingWith(String name) {
+		List<User> users = userRepository.findByNameStartingWith(name);
+		return users;
+	}
 }
