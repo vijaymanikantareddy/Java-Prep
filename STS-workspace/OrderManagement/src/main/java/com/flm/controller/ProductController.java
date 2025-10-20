@@ -1,8 +1,13 @@
 package com.flm.controller;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.flm.dto.ProductRequestDto;
@@ -23,4 +28,25 @@ public class ProductController {
 	public ProductResponseDto saveProduct(@RequestBody ProductRequestDto productRequestDto) {
 		return productService.save(productRequestDto);
 	}
+
+	@PostMapping("/save/all")
+	public List<ProductResponseDto> saveAllProducts(@RequestBody List<ProductRequestDto> productRequestDtos) {
+		return productService.saveAllProducts(productRequestDtos);
+	}
+
+	@GetMapping
+	public List<ProductResponseDto> getProducts() {
+		return productService.getProducts();
+	}
+
+	@GetMapping("/{id}")
+	public ProductResponseDto getProduct(@PathVariable(name = "id") long productId) {
+		return productService.getProduct(productId);
+	}
+
+	@GetMapping("/name")
+	public List<ProductResponseDto> getProductByName(@RequestParam(name = "productName") String productName) {
+		return productService.getProductByName(productName);
+	}
+
 }
