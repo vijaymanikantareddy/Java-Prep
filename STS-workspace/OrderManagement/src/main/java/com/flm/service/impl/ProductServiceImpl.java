@@ -2,6 +2,7 @@ package com.flm.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -74,6 +75,23 @@ public class ProductServiceImpl implements ProductService {
 		return productList;
 	}
 
+	@Override
+	public ProductResponseDto updateProductRating(long id, double rating) {
+		Optional<Product> optionalProduct = productRepository.findById(id);
+		if (optionalProduct.isPresent()) {
+			Product product = optionalProduct.get();
+			product.setRating(rating);
+
+			Product savedProduct = productRepository.save(product);
+			ProductResponseDto productResponseDto = new ProductResponseDto();
+			BeanUtils.copyProperties(savedProduct, productResponseDto);
+			return productResponseDto;
+		}
+
+		return new ProductResponseDto();
+
+	}
+
 	private List<ProductResponseDto> buildProductsResponseList(List<Product> products) {
 		List<ProductResponseDto> productList = new ArrayList<>();
 		for (Product product : products) {
@@ -97,4 +115,5 @@ public class ProductServiceImpl implements ProductService {
 		}
 		return products;
 	}
+
 }

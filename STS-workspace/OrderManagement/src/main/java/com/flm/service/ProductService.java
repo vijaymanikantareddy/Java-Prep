@@ -15,4 +15,6 @@ public interface ProductService {
 	public List<ProductResponseDto> getProductByName(String productName);
 
 	public List<ProductResponseDto> saveAllProducts(List<ProductRequestDto> productRequestDtos);
+
+	public ProductResponseDto updateProductRating(long id, double rating);
 }
