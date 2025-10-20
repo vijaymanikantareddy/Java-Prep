@@ -92,6 +92,17 @@ public class ProductServiceImpl implements ProductService {
 
 	}
 
+	@Override
+	public String deleteProduct(long productId) {
+		Optional<Product> optionalProduct = productRepository.findById(productId);
+		if (optionalProduct.isPresent()) {
+			Product product = optionalProduct.get();
+			productRepository.delete(product);
+			return product.getProductName();
+		}
+		return null;
+	}
+
 	private List<ProductResponseDto> buildProductsResponseList(List<Product> products) {
 		List<ProductResponseDto> productList = new ArrayList<>();
 		for (Product product : products) {

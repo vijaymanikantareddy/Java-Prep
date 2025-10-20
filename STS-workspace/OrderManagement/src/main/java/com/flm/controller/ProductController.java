@@ -2,6 +2,7 @@ package com.flm.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,5 +55,10 @@ public class ProductController {
 	public ProductResponseDto updateProductRating(@PathVariable(name = "id") long id,
 			@RequestParam(name = "rating") double rating) {
 		return productService.updateProductRating(id, rating);
+	}
+
+	@DeleteMapping("/delete/{id}")
+	public String deleteProduct(@PathVariable(name = "id") long productId) {
+		return productService.deleteProduct(productId);
 	}
 }

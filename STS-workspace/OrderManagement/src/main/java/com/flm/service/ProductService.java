@@ -17,4 +17,6 @@ public interface ProductService {
 	public List<ProductResponseDto> saveAllProducts(List<ProductRequestDto> productRequestDtos);
 
 	public ProductResponseDto updateProductRating(long id, double rating);
+
+	public String deleteProduct(long productId);
 }
