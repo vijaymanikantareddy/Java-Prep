@@ -14,16 +14,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "items")
-public class Item {
+@Table(name = "products")
+public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "item_id")
-	private long itemId;
+	@Column(name = "product_id")
+	private long productId;
 
 	@Column(nullable = false)
-	private String itemName;
+	private String productName;
 
 	@Column(nullable = false)
 	private double price;
@@ -37,9 +37,9 @@ public class Item {
 	@Column(nullable = false)
 	private int stock;
 
-	public Item(String itemName, double price, double discount, double rating, boolean isAvailable, int stock) {
+	public Product(String productName, double price, double discount, double rating, boolean isAvailable, int stock) {
 		super();
-		this.itemName = itemName;
+		this.productName = productName;
 		this.price = price;
 		this.discount = discount;
 		this.rating = rating;
