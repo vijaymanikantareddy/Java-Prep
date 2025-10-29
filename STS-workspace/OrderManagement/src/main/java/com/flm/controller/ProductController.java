@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.flm.dto.ProductRequestDto;
-import com.flm.dto.ProductResponseDto;
+import com.flm.dto.ProductRequestDTO;
+import com.flm.dto.ProductResponseDTO;
 import com.flm.service.ProductService;
 
 @RestController
@@ -27,32 +27,32 @@ public class ProductController {
 	}
 
 	@PostMapping("/save")
-	public ProductResponseDto saveProduct(@RequestBody ProductRequestDto productRequestDto) {
-		return productService.save(productRequestDto);
+	public ProductResponseDTO saveProduct(@RequestBody ProductRequestDTO productRequestDTO) {
+		return productService.save(productRequestDTO);
 	}
 
 	@PostMapping("/save/all")
-	public List<ProductResponseDto> saveAllProducts(@RequestBody List<ProductRequestDto> productRequestDtos) {
-		return productService.saveAllProducts(productRequestDtos);
+	public List<ProductResponseDTO> saveAllProducts(@RequestBody List<ProductRequestDTO> productRequestDTOs) {
+		return productService.saveAllProducts(productRequestDTOs);
 	}
 
 	@GetMapping
-	public List<ProductResponseDto> getProducts() {
+	public List<ProductResponseDTO> getProducts() {
 		return productService.getProducts();
 	}
 
 	@GetMapping("/{id}")
-	public ProductResponseDto getProduct(@PathVariable(name = "id") long productId) {
+	public ProductResponseDTO getProduct(@PathVariable(name = "id") long productId) {
 		return productService.getProduct(productId);
 	}
 
 	@GetMapping("/name")
-	public List<ProductResponseDto> getProductByName(@RequestParam(name = "productName") String productName) {
+	public List<ProductResponseDTO> getProductByName(@RequestParam(name = "productName") String productName) {
 		return productService.getProductByName(productName);
 	}
 
 	@PutMapping("/update/{id}")
-	public ProductResponseDto updateProductRating(@PathVariable(name = "id") long id,
+	public ProductResponseDTO updateProductRating(@PathVariable(name = "id") long id,
 			@RequestParam(name = "rating") double rating) {
 		return productService.updateProductRating(id, rating);
 	}
@@ -61,4 +61,5 @@ public class ProductController {
 	public String deleteProduct(@PathVariable(name = "id") long productId) {
 		return productService.deleteProduct(productId);
 	}
+
 }

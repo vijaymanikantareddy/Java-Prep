@@ -32,10 +32,14 @@ public class Product {
 
 	private double rating;
 
+	@Column(nullable = false)
 	private boolean isAvailable;
 
 	@Column(nullable = false)
 	private int stock;
+
+//	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+//	private List<OrderItem> orderItems;
 
 	public Product(String productName, double price, double discount, double rating, boolean isAvailable, int stock) {
 		super();

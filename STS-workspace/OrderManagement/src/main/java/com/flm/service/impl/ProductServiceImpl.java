@@ -8,8 +8,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import com.flm.dao.ProductRepository;
-import com.flm.dto.ProductRequestDto;
-import com.flm.dto.ProductResponseDto;
+import com.flm.dto.ProductRequestDTO;
+import com.flm.dto.ProductResponseDTO;
 import com.flm.model.Product;
 import com.flm.service.ProductService;
 
@@ -23,72 +23,72 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public ProductResponseDto save(ProductRequestDto productRequestDto) {
+	public ProductResponseDTO save(ProductRequestDTO productRequestDTO) {
 		Product product = new Product();
-		product.setProductName(productRequestDto.getProductName());
-		product.setPrice(productRequestDto.getPrice());
-		product.setDiscount(productRequestDto.getDiscount());
-		product.setStock(productRequestDto.getStock());
+		product.setProductName(productRequestDTO.getProductName());
+		product.setPrice(productRequestDTO.getPrice());
+		product.setDiscount(productRequestDTO.getDiscount());
+		product.setStock(productRequestDTO.getStock());
 		if (product.getStock() > 0) {
 			product.setAvailable(true);
 		}
 
 		Product savedProduct = productRepository.save(product);
 
-		ProductResponseDto productResponseDto = new ProductResponseDto();
-		BeanUtils.copyProperties(savedProduct, productResponseDto);
-		return productResponseDto;
+		ProductResponseDTO productResponseDTO = new ProductResponseDTO();
+		BeanUtils.copyProperties(savedProduct, productResponseDTO);
+		return productResponseDTO;
 	}
 
 	@Override
-	public List<ProductResponseDto> saveAllProducts(List<ProductRequestDto> productRequestDtos) {
+	public List<ProductResponseDTO> saveAllProducts(List<ProductRequestDTO> productRequestDTOs) {
 
-		List<Product> products = buildProductsList(productRequestDtos);
+		List<Product> products = buildProductsList(productRequestDTOs);
 		List<Product> savedProducts = productRepository.saveAll(products);
 
-		List<ProductResponseDto> productResponseList = buildProductsResponseList(savedProducts);
+		List<ProductResponseDTO> productResponseList = buildProductsResponseList(savedProducts);
 		return productResponseList;
 	}
 
 	@Override
-	public List<ProductResponseDto> getProducts() {
+	public List<ProductResponseDTO> getProducts() {
 		List<Product> products = productRepository.findAll();
-		List<ProductResponseDto> productList = buildProductsResponseList(products);
+		List<ProductResponseDTO> productList = buildProductsResponseList(products);
 
 		return productList;
 	}
 
 	@Override
-	public ProductResponseDto getProduct(long productId) {
+	public ProductResponseDTO getProduct(long productId) {
 		Product product = productRepository.findById(productId).get();
 
-		ProductResponseDto productResponseDto = new ProductResponseDto();
-		BeanUtils.copyProperties(product, productResponseDto);
-		return productResponseDto;
+		ProductResponseDTO productResponseDTO = new ProductResponseDTO();
+		BeanUtils.copyProperties(product, productResponseDTO);
+		return productResponseDTO;
 	}
 
 	@Override
-	public List<ProductResponseDto> getProductByName(String productName) {
+	public List<ProductResponseDTO> getProductByName(String productName) {
 		List<Product> products = productRepository.findByProductNameContaining(productName);
-		List<ProductResponseDto> productList = buildProductsResponseList(products);
+		List<ProductResponseDTO> productList = buildProductsResponseList(products);
 
 		return productList;
 	}
 
 	@Override
-	public ProductResponseDto updateProductRating(long id, double rating) {
+	public ProductResponseDTO updateProductRating(long id, double rating) {
 		Optional<Product> optionalProduct = productRepository.findById(id);
 		if (optionalProduct.isPresent()) {
 			Product product = optionalProduct.get();
 			product.setRating(rating);
 
 			Product savedProduct = productRepository.save(product);
-			ProductResponseDto productResponseDto = new ProductResponseDto();
-			BeanUtils.copyProperties(savedProduct, productResponseDto);
-			return productResponseDto;
+			ProductResponseDTO productResponseDTO = new ProductResponseDTO();
+			BeanUtils.copyProperties(savedProduct, productResponseDTO);
+			return productResponseDTO;
 		}
 
-		return new ProductResponseDto();
+		return new ProductResponseDTO();
 
 	}
 
@@ -103,22 +103,22 @@ public class ProductServiceImpl implements ProductService {
 		return null;
 	}
 
-	private List<ProductResponseDto> buildProductsResponseList(List<Product> products) {
-		List<ProductResponseDto> productList = new ArrayList<>();
+	private List<ProductResponseDTO> buildProductsResponseList(List<Product> products) {
+		List<ProductResponseDTO> productList = new ArrayList<>();
 		for (Product product : products) {
-			ProductResponseDto productResponseDto = new ProductResponseDto();
-			BeanUtils.copyProperties(product, productResponseDto);
-			productList.add(productResponseDto);
+			ProductResponseDTO productResponseDTO = new ProductResponseDTO();
+			BeanUtils.copyProperties(product, productResponseDTO);
+			productList.add(productResponseDTO);
 		}
 		return productList;
 	}
 
-	private List<Product> buildProductsList(List<ProductRequestDto> productRequestDtos) {
+	private List<Product> buildProductsList(List<ProductRequestDTO> productRequestDTOs) {
 		List<Product> products = new ArrayList<>();
-		for (ProductRequestDto productRequestDto : productRequestDtos) {
+		for (ProductRequestDTO productRequestDTO : productRequestDTOs) {
 			Product product = new Product();
 
-			BeanUtils.copyProperties(productRequestDto, product);
+			BeanUtils.copyProperties(productRequestDTO, product);
 			if (product.getStock() > 0) {
 				product.setAvailable(true);
 			}

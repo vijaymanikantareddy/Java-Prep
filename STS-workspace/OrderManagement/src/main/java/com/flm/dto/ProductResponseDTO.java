@@ -3,7 +3,7 @@ package com.flm.dto;
 import lombok.Data;
 
 @Data
-public class ProductResponseDto {
+public class ProductResponseDTO {
 
 	private long productId;
 

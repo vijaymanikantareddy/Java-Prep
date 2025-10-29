@@ -2,21 +2,21 @@ package com.flm.service;
 
 import java.util.List;
 
-import com.flm.dto.ProductRequestDto;
-import com.flm.dto.ProductResponseDto;
+import com.flm.dto.ProductRequestDTO;
+import com.flm.dto.ProductResponseDTO;
 
 public interface ProductService {
-	public ProductResponseDto save(ProductRequestDto productRequestDto);
+	public ProductResponseDTO save(ProductRequestDTO productRequestDTO);
 
-	public List<ProductResponseDto> getProducts();
+	public List<ProductResponseDTO> getProducts();
 
-	public ProductResponseDto getProduct(long productId);
+	public ProductResponseDTO getProduct(long productId);
 
-	public List<ProductResponseDto> getProductByName(String productName);
+	public List<ProductResponseDTO> getProductByName(String productName);
 
-	public List<ProductResponseDto> saveAllProducts(List<ProductRequestDto> productRequestDtos);
+	public List<ProductResponseDTO> saveAllProducts(List<ProductRequestDTO> productRequestDTOs);
 
-	public ProductResponseDto updateProductRating(long id, double rating);
+	public ProductResponseDTO updateProductRating(long id, double rating);
 
 	public String deleteProduct(long productId);
 }
