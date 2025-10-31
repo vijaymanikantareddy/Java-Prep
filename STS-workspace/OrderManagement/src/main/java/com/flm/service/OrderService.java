@@ -7,4 +7,6 @@ import com.flm.dto.OrderResponseDTO;
 
 public interface OrderService {
 	public OrderResponseDTO placeOrder(List<OrderRequestDTO> orderRequestDTOs);
+
+	public OrderResponseDTO getOrderInfo(long orderId);
 }
