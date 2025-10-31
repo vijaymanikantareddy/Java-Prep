@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.flm.dao.OrderRepository;
@@ -92,10 +94,11 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public OrderResponseDTO getOrderInfo(long orderId) {
+	public ResponseEntity<OrderResponseDTO> getOrderInfo(long orderId) {
 		Order order = orderRepository.findById(orderId)
 				.orElseThrow(() -> new OrderNotFoundException("No Order Found With Id : " + orderId));
-		return buildOrderResponseDtoFromOrder(order);
+		OrderResponseDTO orderResponseDto = buildOrderResponseDtoFromOrder(order);
+		return ResponseEntity.status(HttpStatus.OK).body(orderResponseDto);
 	}
 
 }
