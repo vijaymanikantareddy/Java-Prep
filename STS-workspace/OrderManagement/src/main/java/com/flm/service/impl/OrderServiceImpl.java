@@ -8,11 +8,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.flm.dao.OrderItemRepository;
 import com.flm.dao.OrderRepository;
 import com.flm.dao.ProductRepository;
 import com.flm.dto.OrderItemResponseDTO;
 import com.flm.dto.OrderRequestDTO;
 import com.flm.dto.OrderResponseDTO;
+import com.flm.exception.OrderItemNotFoundException;
 import com.flm.exception.OrderNotFoundException;
 import com.flm.model.Order;
 import com.flm.model.OrderItem;
@@ -22,11 +24,17 @@ import com.flm.service.OrderService;
 @Service
 public class OrderServiceImpl implements OrderService {
 
+	private final OrderItemRepository orderItemRepository;
+
 	@Autowired
 	ProductRepository productRepository;
 
 	@Autowired
 	OrderRepository orderRepository;
+
+	OrderServiceImpl(OrderItemRepository orderItemRepository) {
+		this.orderItemRepository = orderItemRepository;
+	}
 
 	@Override
 	public OrderResponseDTO placeOrder(List<OrderRequestDTO> orderRequestDTOList) {
@@ -99,6 +107,20 @@ public class OrderServiceImpl implements OrderService {
 				.orElseThrow(() -> new OrderNotFoundException("No Order Found With Id : " + orderId));
 		OrderResponseDTO orderResponseDto = buildOrderResponseDtoFromOrder(order);
 		return ResponseEntity.status(HttpStatus.OK).body(orderResponseDto);
+	}
+
+	@Override
+	public ResponseEntity<Void> cancelItem(long orderItemId) {
+		OrderItem orderItem = orderItemRepository.findById(orderItemId)
+				.orElseThrow(() -> new OrderItemNotFoundException("No Order Item Found with ID: " + orderItemId));
+
+		orderItemRepository.delete(orderItem);
+
+		long productId = orderItem.getProduct().getProductId();
+		int stock = orderItem.getProduct().getStock();
+		productRepository.updateStock(productId, stock + orderItem.getQuantity());
+
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
 
 }

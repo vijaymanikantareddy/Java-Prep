@@ -11,4 +11,6 @@ public interface OrderService {
 	public OrderResponseDTO placeOrder(List<OrderRequestDTO> orderRequestDTOs);
 
 	public ResponseEntity<OrderResponseDTO> getOrderInfo(long orderId);
+
+	public ResponseEntity<Void> cancelItem(long orderItemId);
 }

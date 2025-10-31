@@ -12,4 +12,9 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<String> handleOrderNotFoundException(OrderNotFoundException ex) {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
 	}
+
+	@ExceptionHandler(OrderItemNotFoundException.class)
+	public ResponseEntity<String> handleOrderItemNotFoundException(OrderItemNotFoundException ex) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+	}
 }
