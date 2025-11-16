@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+</head>
+<body>
+	<h1>
+		Hello mr. <span th:text="${name}"></span> , Welcome to JFS class
+	</h1>
+
+	<a th:href="@{/form}">Submit </a>
+	
+	<form th:action="@{/submitObject}" th:object="${user}" method="post">
+		username: <input type="text" th:field="*{name}" /> password: <input
+			type="password" th:field="*{password}" /> <input type="submit"
+			value="Submit" />
+	</form>
+</body>
+</html>
